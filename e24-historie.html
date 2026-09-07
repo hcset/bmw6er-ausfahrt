@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Der lange Atem des Haifischs – BMW 6er E24 Modellhistorie</title>
+<meta name="description" content="BMW 6er der Baureihe E24 (1975–1989): Modellhistorie und Technik – vom E9-Erbe über die Modellpflegen bis zu Motorsport, Marktvarianten und Sammlermarkt.">
+<meta name="version" content="1.0.0">
+<meta name="version-date" content="2026-09-07">
+<style>
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish Condensed"; src: url("assets/fonts/DINishCondensed-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish Condensed"; src: url("assets/fonts/DINishCondensed-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+
+:root {
+  --orange: #b4441c;
+  --ocker: #d98e24;
+  --braun: #8a5a1e;
+  --nacht: #2e1c10;
+  --ink: #2a1f14;
+  --ink-2: #6b5d4a;
+  --papier: #f8f2e4;
+  --grau: #efe6d2;
+  --linie: #d9cbb0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: "DINish", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px; line-height: 1.62; color: var(--ink); background: #c3b294;
+}
+::selection { background: var(--orange); color: #fff; }
+
+nav.leiste {
+  position: sticky; top: 0; z-index: 30; background: var(--nacht);
+  display: flex; align-items: center; padding: 0 14px;
+}
+nav.leiste a {
+  color: var(--ocker); text-decoration: none;
+  font-family: "DINish Condensed"; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; font-size: 0.95rem; padding: 13px 10px 11px;
+}
+nav.leiste a:hover, nav.leiste a:focus-visible { color: #fff; }
+nav.leiste span { color: #b39668; font-size: 0.85rem; margin-left: auto; padding-right: 4px; }
+
+main {
+  background: var(--papier); max-width: 820px; margin: 0 auto 24px;
+  padding: 48px 52px 56px; box-shadow: 0 2px 14px rgba(16, 24, 40, 0.18);
+}
+@media (max-width: 680px) { main { padding: 28px 20px 38px; } }
+
+.m-band { display: flex; gap: 7px; height: 11px; margin: 16px 0 30px; }
+.m-band span { transform: skewX(-24deg); }
+.m-band span:nth-child(1) { width: 74px; background: #d75428; }
+.m-band span:nth-child(2) { width: 30px; background: var(--ocker); }
+.m-band span:nth-child(3) { width: 15px; background: var(--braun); }
+
+h1 {
+  font-family: "DINish Condensed"; font-weight: 900; text-transform: uppercase;
+  font-size: clamp(2.2rem, 6vw, 3.3rem); line-height: 1.02; margin: 0 0 6px;
+}
+p.untertitel { font-size: 1.15rem; color: var(--ink-2); margin: 0; max-width: 60ch; }
+h2 {
+  font-family: "DINish Condensed"; font-weight: 900; text-transform: uppercase;
+  font-size: 1.5rem; letter-spacing: 0.01em; margin: 42px 0 10px;
+  padding-top: 18px; border-top: 2px solid var(--ink);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+p { margin: 0 0 14px; max-width: 70ch; }
+strong { font-weight: 700; }
+.lead { font-size: 1.08rem; }
+
+.tabelle-rahmen { overflow-x: auto; margin: 18px 0; border: 2px solid var(--ink); }
+table { border-collapse: collapse; width: 100%; min-width: 780px; font-size: 0.88rem; }
+th {
+  font-family: "DINish Condensed"; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; text-align: left; background: var(--nacht); color: #f0e5cf;
+  padding: 8px 10px;
+}
+td { padding: 7px 10px; border-bottom: 1px solid var(--linie); vertical-align: top; font-variant-numeric: tabular-nums; }
+tr:nth-child(even) td { background: var(--grau); }
+td:first-child { font-weight: 700; white-space: nowrap; }
+.chrono td:first-child { white-space: nowrap; }
+.unsicher { color: var(--ink-2); font-style: italic; }
+
+.offene {
+  margin-top: 40px; border: 3px solid var(--braun); padding: 18px 22px; background: #f3ead6;
+}
+.offene h2 { border: 0; padding: 0; margin: 0 0 8px; font-size: 1.3rem; }
+.offene ul { margin: 0; padding-left: 20px; }
+.offene li { margin-bottom: 8px; }
+.fussnote { margin-top: 34px; padding-top: 12px; border-top: 1px solid var(--linie); font-size: 0.82rem; color: var(--ink-2); }
+
+#version-badge {
+  position: fixed; right: 12px; bottom: 12px; z-index: 99;
+  background: var(--nacht); color: #fff; font-size: 0.8rem;
+  padding: 6px 12px; display: none;
+}
+#version-badge.sichtbar { display: block; }
+
+@page { size: A4; margin: 16mm 14mm; }
+@media print {
+  body { background: #fff; font-size: 10pt; }
+  nav.leiste, #version-badge { display: none !important; }
+  main { box-shadow: none; max-width: none; padding: 0; }
+  .tabelle-rahmen { overflow: visible; }
+  table { min-width: 0; font-size: 7.6pt; }
+  h2 { break-after: avoid; }
+  tr, .offene li { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<nav class="leiste">
+  <a href="./">&larr; Menü</a>
+  <span>BMW 6er Club · Ausfahrt 03.10.2026</span>
+</nav>
+
+<main>
+<h1>Der lange Atem des Haifischs</h1>
+<p class="untertitel">BMW 6er der Baureihe E24 (1975–1989): Modellhistorie und Technik</p>
+<div class="m-band" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<h2>Ein Coupé, das zu lange gut war</h2>
+<p class="lead">Dreizehneinhalb Jahre lief der E24 vom Band – länger als jede andere BMW-Baureihe zuvor. Das ist bemerkenswert für ein Auto, dessen technische Basis schon bei der Markteinführung nicht mehr taufrisch war und das seine Karriere zweimal durch tiefgreifende Modellpflegen verlängern musste. Es ist auch die Geschichte eines Coupés, das ein schwieriges Erbe antrat und trotzdem eine eigene Identität fand.</p>
+
+<h2>1. Vorgeschichte: das E9-Coupé bis 1975</h2>
+<p>Der Vorgänger war eine Legende, was die Aufgabe nicht leichter machte. Das E9-Coupé – ab 1968 als 2800 CS, ab 1971 als 3.0 CS und 3.0 CSi, dazu die homologationsgetriebene Leichtbauvariante 3.0 CSL – hatte BMW das sportliche Prestige verschafft, das dem Haus bis dahin fehlte. Die Karosserie stammte im Kern noch aus der Mitte der sechziger Jahre und wurde bei Karmann in Osnabrück gefertigt, mit viel Handarbeit, dünnen Säulen und einer seitlich fast durchgehenden Glasfläche ohne feste B-Säule.</p>
+<p>Genau diese Bauweise wurde dem E9 zum Verhängnis. Die Karosserie galt als rostanfällig, die Fertigungsqualität schwankte, und vor allem war die Struktur den absehbar schärferen Crashanforderungen nicht gewachsen. Hinzu kam, dass BMW Anfang der siebziger Jahre seine Modellpalette systematisch neu ordnete: 1972 kam der erste 5er (E12), 1975 der erste 3er (E21), 1977 sollte der erste 7er (E23) folgen. In dieses Baukastendenken passte ein handwerklich gebautes Solitär-Coupé auf alter Basis nicht mehr. Die E9-Produktion lief 1975 aus.</p>
+
+<h2>2. Ablösung: Produktionsstart Oktober 1975, Vorstellung März 1976</h2>
+<p>Hier lohnt eine Präzisierung, weil die Jahreszahlen in der Literatur durcheinandergehen. Die ersten beiden Serienfahrzeuge – ein 630 CS und ein 633 CSi – verließen am 15. Oktober 1975 das Band. Öffentlich vorgestellt wurde der E24 aber erst im März 1976 auf dem Genfer Auto-Salon. Wer also „1975" als Anfangsjahr nennt, meint den Produktionsstart; wer „1976" sagt, meint die Premiere. Beides ist richtig, nur eben nicht dasselbe.</p>
+<p>Positioniert wurde der E24 klar oberhalb des 5ers als viersitziges Oberklasse-Coupé. Interessant ist die zeitliche Reihenfolge: Das 6er-Coupé nahm die Formensprache des erst im Mai 1977 präsentierten 7ers (E23) in weiten Teilen vorweg. Technisch griff es dagegen zurück – auf die modifizierte, im Radstand leicht verkürzte Bodengruppe des E12.</p>
+
+<h2>3. Serie 1 (1975/76–1982): Basis, Bau und Ausstattung</h2>
+<p>Der Aufbau war konventionell und gerade deshalb stimmig: Frontlängsmotor, Hinterradantrieb, vorn MacPherson-Federbeine, hinten Schräglenker. Die Crashtests während der Entwicklung führten zu einer schwereren, aber deutlich steiferen Struktur als beim E9 – der Preis dafür war die neu hinzugekommene B-Säule, die BMW mit schwarzem Kunststoff verkleidete, um sie optisch verschwinden zu lassen. Die hinteren Seitenscheiben ließen sich dadurch nur noch etwa 20 cm versenken.</p>
+<p>Gebaut wurde der E24 zunächst komplett bei Karmann. Wegen schwankender Qualität übernahm BMW ab August 1977 die Endmontage im Werk Dingolfing; aus Osnabrück kamen fortan nur noch die Rohkarossen. Das ist ein praktisches Erkennungsmerkmal: Die frühen Karmann-Wagen hatten serienmäßig Teillederausstattung, die ab 1977 in Dingolfing montierten bereits Ledersitze.</p>
+<p>Die Serienausstattung war für 1976 üppig: Zentralverriegelung, elektrische Fensterheber, elektrisch verstellbare Außenspiegel, höhenverstellbarer Fahrersitz, längsverstellbares Lenkrad, Servolenkung mit Sicherheitslenksäule, Verbundglas-Frontscheibe, Leichtmetallräder, Drehzahlmesser. Die Fondsitze waren durchweg Einzelsitze. Als technische Neuheit galt die Check Control, die auf Knopfdruck Brems- und Schlussleuchten, Füllstände von Kühlmittel, Motoröl, Bremsflüssigkeit und Waschwasser sowie die Belagstärke der Bremsen prüfte. Zum Start kosteten der 630 CS 40.600 DM und der 633 CSi 43.100 DM.</p>
+<p>1978 kam der 635 CSi als sportliche Spitze hinzu, für 49.400 DM, erkennbar an Front- und Heckspoiler, Zierstreifen und BBS-Kreuzspeichenrädern. Serienmäßig waren straffere Dämpfer, verstärkte Stabilisatoren, ein Fünfganggetriebe und ein Sperrdifferential mit 25 Prozent Sperrgrad (gegen Aufpreis 40 Prozent). Im Cockpit hatte er rote statt weiße Zeiger. 1979 ersetzte der 628 CSi den durstigen Vergaser-630 CS; sein aus dem 528i stammender 2,8-Liter-Einspritzer erreichte die Fahrleistungen des größeren Vorgängers nahezu, verbrauchte aber deutlich weniger.</p>
+
+<h2>4. Die große Modellpflege im Mai 1982</h2>
+<p>Was im Mai 1982 geschah, war mehr als eine Auffrischung. BMW brachte den 6er fahrwerks- und motorseitig auf den Stand des E28, also des E12-Nachfolgers. Durch die Fahrwerksänderungen konnte auch die Karosseriestruktur überarbeitet werden – sie wurde rund 50 kg leichter und zugleich steifer. Die Lenkung wurde direkter übersetzt (Gesamtübersetzung von 16,9:1 auf 15,7:1). Das Bremssystem wechselte vom Doppel- auf ein Diagonal-Zweikreissystem mit 284-mm-Scheiben rundum, vorn innenbelüftet.</p>
+<p>Beim 635 CSi ersetzte die Bosch Motronic die L-Jetronic, ABS wurde serienmäßig; beim 628 CSi blieb ABS zunächst Aufpreisoption und wurde erst 1984 Serie. Der 633 CSi verschwand in Deutschland aus dem Programm, lief für andere Märkte aber bis 1984 weiter. Der kombinierte Verbrauch sank spürbar: beim 628 CSi um 9,1 Prozent, beim 635 CSi um 17,9 Prozent (jeweils DIN-Drittelmix).</p>
+<p>Optisch blieb es zurückhaltend: größere Frontschürzen mit bündig integrierten Nebelscheinwerfern, eine bis an die Radläufe reichende Heckstoßstange. Im Innenraum wanderten Tacho und Drehzahlmesser – jetzt gleich groß – nach außen, dazwischen saßen Tankuhr, Temperaturanzeige und die neue Service-Intervall-Anzeige. Die Check Control überwachte nun selbsttätig statt auf Knopfdruck und meldete Fehler per Gong und Warnlampe. Neu war der Bordcomputer (im 635 CSi Serie, im 628 CSi Option) mit Außentemperatur samt Eiswarnung, Durchschnittswerten, programmierbarer Geschwindigkeitsgrenze und einer Code-Wegfahrsperre. Ab 1984 hieß er BC II, verlor die Ankunftszeitberechnung, wechselte von LED auf hintergrundbeleuchtetes LC-Display und ließ sich vom Blinkerhebel bedienen.</p>
+<p>Die zweite Modellpflege im Mai 1987 fiel äußerlich auffälliger aus: große Stoßfänger mit Prallboxen nach US-Vorbild (bis 8 km/h reversibel, bis 15 km/h per Deformationselement), in Wagenfarbe lackierte seitliche Blenden, ein voluminöserer Frontspoiler und DE-Ellipsoidscheinwerfer vom E32. Die Fahrzeuglänge wuchs damit auf 4.815 mm. Der 628 CSi entfiel.</p>
+
+<h2>5. Die Motoren</h2>
+<p>Alle E24 hatten Reihensechszylinder. Bis auf den M635 CSi stammten sie aus der M30-Familie mit einer obenliegenden Nockenwelle und zwei Ventilen je Zylinder; der M635 CSi bekam den vom M1 abgeleiteten Vierventiler mit zwei obenliegenden Nockenwellen und sechs Einzeldrosselklappen.</p>
+<div class="tabelle-rahmen"><table>
+<thead><tr><th>Modell</th><th>Motor</th><th>Hubraum</th><th>Gemischaufbereitung</th><th>Leistung</th><th>Drehmoment</th><th>Bauzeit</th></tr></thead>
+<tbody>
+<tr><td>630 CS</td><td>M30</td><td>2.985 cm³</td><td>Solex-Doppelregistervergaser</td><td>136 kW (185 PS) bei 5.800/min</td><td>255 Nm bei 3.500/min</td><td>10/1975–08/1979</td></tr>
+<tr><td>630 CSi (USA)</td><td>M30</td><td>2.985 cm³</td><td>Einspritzung, Thermoreaktor</td><td><span class="unsicher">ca. 130 kW (177 PS) [unsicher]</span></td><td><span class="unsicher">k. A. [unsicher]</span></td><td>09/1976–07/1977</td></tr>
+<tr><td>628 CSi</td><td>M30B28</td><td>2.788 cm³</td><td>Bosch L-Jetronic</td><td>135 kW (184 PS) bei 5.800/min</td><td>240 Nm bei 4.200/min</td><td>06/1979–05/1987</td></tr>
+<tr><td>633 CSi</td><td>M30B32</td><td>3.210 cm³</td><td>L-Jetronic, US ab 07/1979 Motronic</td><td>147 kW (200 PS) bei 5.500/min</td><td>285 Nm bei 4.300/min</td><td>10/1975–09/1984</td></tr>
+<tr><td>635 CSi</td><td>M90</td><td>3.453 cm³</td><td>L-Jetronic, ab 09/1980 Motronic</td><td>160 kW (218 PS) bei 5.200/min</td><td>310 Nm bei 4.000/min</td><td>06/1978–04/1982</td></tr>
+<tr><td>635 CSi</td><td>M30B34</td><td>3.430 cm³</td><td>Bosch Motronic</td><td>160 kW (218 PS) bei 5.400/min</td><td>310 Nm bei 4.000/min</td><td>05/1982–06/1987</td></tr>
+<tr><td>635 CSi (CH/S)</td><td>M30</td><td>3.210 cm³</td><td>abgasgereinigt, Sekundärluft + AGR</td><td>145 kW (197 PS)</td><td><span class="unsicher">k. A. [unsicher]</span></td><td>1982–1984</td></tr>
+<tr><td>635 CSi (CH)</td><td>M30</td><td>3.430 cm³</td><td>niederverdichtet, zwei Zündkennfelder</td><td>150 kW (204 PS)</td><td><span class="unsicher">k. A. [unsicher]</span></td><td>MJ 1985–1987</td></tr>
+<tr><td>635 CSi Kat</td><td>M30B35</td><td>3.430 cm³</td><td>Motronic</td><td>155 kW (211 PS)</td><td><span class="unsicher">ca. 305 Nm [unsicher]</span></td><td>06/1987–04/1989</td></tr>
+<tr><td>635 CSi ohne Kat</td><td>M30B35</td><td>3.430 cm³</td><td>Motronic</td><td>162 kW (220 PS)</td><td><span class="unsicher">ca. 320 Nm [unsicher]</span></td><td>06/1987–04/1989</td></tr>
+<tr><td>M635 CSi</td><td>M88/3</td><td>3.453 cm³</td><td>Motronic, 6 Einzeldrosselklappen</td><td>210 kW (286 PS) bei 6.500/min</td><td>340 Nm bei 4.500/min</td><td>04/1984–04/1989</td></tr>
+<tr><td>M635 CSi Kat / M6</td><td>S38B35</td><td>3.453 cm³</td><td>Motronic, niedrigere Verdichtung</td><td><span class="unsicher">ca. 191 kW (260 PS) [unsicher]</span></td><td><span class="unsicher">ca. 330 Nm [unsicher]</span></td><td>07/1986–04/1989</td></tr>
+</tbody>
+</table></div>
+<p>Bei den Getrieben gilt: Anfangs Vierganggetriebe, ab 1978 im 635 CSi ein Fünfganggetriebe, ab 1979 breiter verfügbare Fünfgang-Schongetriebe, ab 1982 serienmäßig. Die Automatik war zunächst dreistufig, ab 1983 vierstufig mit elektronisch-hydraulischer Steuerung und drei Fahrprogrammen. Der M635 CSi bekam ein verstärktes Getrag 280/5 – ein Sportgetriebe mit längerem erstem Gang und enger Spreizung, aber ohne das Dogleg-Schaltschema des M535i. Sperrdifferential mit 25 Prozent: beim 635 CSi und M635 CSi serienmäßig.</p>
+<p>Die Bremsanlage des M635 CSi wich deutlich ab: vorn 300-mm-Scheiben, innenbelüftet, mit Vierkolben-Festsätteln statt der Einkolben-Faustsättel und 284-mm-Scheiben der schwächeren Modelle. Auch die 88-Ah-Batterie wanderte in den Kofferraum – aus Platzmangel im Motorraum, aber mit dem willkommenen Nebeneffekt besserer Traktion.</p>
+
+<h2>6. Chronologie der Modellpflege</h2>
+<div class="tabelle-rahmen"><table class="chrono" style="min-width:560px">
+<thead><tr><th>Datum</th><th>Maßnahme</th></tr></thead>
+<tbody>
+<tr><td>15.10.1975</td><td>Produktionsstart, erste Serienfahrzeuge 630 CS und 633 CSi</td></tr>
+<tr><td>03/1976</td><td>Öffentliche Vorstellung, Genfer Auto-Salon</td></tr>
+<tr><td>09/1976</td><td>US-Markteinführung mit 630 CSi (Thermoreaktor, Katalysator)</td></tr>
+<tr><td>08/1977</td><td>Endmontage wechselt von Karmann nach Dingolfing</td></tr>
+<tr><td>06/1978</td><td>635 CSi ergänzt die Palette, Fünfganggetriebe und Sperrdifferential serienmäßig</td></tr>
+<tr><td>06/1979</td><td>628 CSi löst den 630 CS ab; US-633 CSi auf Motronic umgestellt</td></tr>
+<tr><td>09/1980</td><td>635 CSi erhält Motronic</td></tr>
+<tr><td>05/1982</td><td>Große Modellpflege: E28-Bodengruppe und -Fahrwerk, Karosserie ~50 kg leichter, ABS beim 635 CSi Serie, Bordcomputer, aktive Check Control, Service-Intervall-Anzeige. Typbezeichnung 6 CS/1</td></tr>
+<tr><td>1983</td><td>Vierstufen-Automatik mit drei Fahrprogrammen</td></tr>
+<tr><td>04/1984</td><td>M635 CSi mit M88/3</td></tr>
+<tr><td>1984</td><td>ABS auch beim 628 CSi Serie; Bordcomputer BC II</td></tr>
+<tr><td>07/1986</td><td>M635 CSi mit Katalysator (S38B35)</td></tr>
+<tr><td>05/1987</td><td>Zweite Modellpflege: große Stoßfänger mit Prallboxen, DE-Scheinwerfer, Länge 4.815 mm; 628 CSi entfällt; 635 CSi mit M30B35</td></tr>
+<tr><td>14.04.1989</td><td>Letzter E24, ein 635 CSi Automatik in Lachssilber</td></tr>
+</tbody>
+</table></div>
+
+<h2>7. Karosserie und Design</h2>
+<p>Verantwortlich für die Form zeichnete BMW-Chefdesigner Paul Bracq. Der E24 ist länger und breiter als der E9, bei 2.630 mm Radstand und ursprünglich 4.755 mm Länge (US-Ausführungen: 4.923 mm, ab 1987 allgemein 4.815 mm), 1.725 mm Breite und rund 1.365 mm Höhe. Das Leergewicht bewegte sich je nach Modell und Ausstattung etwa zwischen 1.450 und 1.620 kg.</p>
+<p>Innen verfeinerte Bracq das mit dem E12 eingeführte fahrerorientierte Cockpit weiter – mit dem seit dem E21 üblichen, zum Fahrer gedrehten Mittelkonsolenaufbau. Dieses Element hielt sich bei BMW über 25 Jahre.</p>
+<p>Prägend blieb die vorgeneigte Frontpartie, die dem Auto den Spitznamen „Sharknose" eintrug. Kurios ist die Klimaanlage: Sie arbeitete durchgehend im Umluftprinzip, saugte die Luft unten aus der Mittelkonsole an und blies sie über die mittleren Düsen zurück – eine Verteilung zur Frontscheibe oder in den Fußraum war nicht vorgesehen und blieb es bis zum Produktionsende.</p>
+
+<h2>8. Motorsport</h2>
+<p>Ab 1981 wurde der 635 CSi von teils werksunterstützten Teams in der Gruppe 2, ab 1982 in der Gruppe A eingesetzt. Eigene Werksfahrzeuge stellte BMW nicht: Karmann verschweißte die Rohkarossen speziell, BMW lieferte ein Teile-Kit mit Fahrwerk, Bremsen, Sicherheitstank und Aerodynamikteilen, und weil außer BMW nur Alpina die Motorelektronik umprogrammieren konnte, kamen sämtliche Rennmotoren von dort. 1983 kostete eine Karosserie samt Kit 120.000 DM, der Motor weitere 35.000 DM.</p>
+<p>Gegen den rund 420 PS starken Jaguar XJ-S und die turboaufgeladenen Volvo 240 mit etwa 350 PS fehlte dem knapp 300 PS starken Coupé Leistung. Es gewann trotzdem – über Zuverlässigkeit, Fahrbarkeit und Verbrauch. Dreimal ging die Tourenwagen-Europameisterschaft an den 635 CSi: 1981 mit Helmut Kelleners, 1983 mit Dieter Quester, 1986 mit Roberto Ravaglia. In Spa-Francorchamps siegte er 1983, 1985 und 1986, auf dem Nürburgring war er 1984 und 1985 erfolgreich. Und im Gründungsjahr der DTM 1984 gewann Volker Strycek die Meisterschaft, ohne ein einziges Rennen zu gewinnen – konstante Punkte reichten.</p>
+<p>Die direkte Rückwirkung auf die Serie war begrenzt. Der M635 CSi entstand nicht aus einem Homologationszwang, sondern aus dem Motorenregal: Der M88/3 war eine überarbeitete Version des M1-Triebwerks.</p>
+
+<h2>9. Marktvarianten</h2>
+<p>Vier Ländervarianten sind zu unterscheiden. <strong>Europa</strong> (Bezeichnung ECE bzw. KAT) bot die meiste Auswahl, Links- wie Rechtslenker. Für die <strong>Schweiz und Schweden</strong> entstanden ab Oktober 1982 wegen verschärfter Abgas- und Geräuschgrenzwerte Sondermotorisierungen: bis Ende 1984 ein abgasgereinigter 3,2-Liter mit 197 PS, ab Modelljahr 1985 wahlweise ein niederverdichteter 3,4-Liter mit 204 PS und zweitem Zündkennfeld unter 65 km/h.</p>
+<p>Die <strong>USA-Modelle</strong> (U49, ab 1979 U50) litten anfangs am Thermoreaktor-Konzept mit Abgasrückführung, Sekundärlufteinblasung und abgesenkter Verdichtung. Die Fahrleistungen des 630 CSi fielen entsprechend mild aus, die Verkaufszahlen blieben zäh. Erst der Wechsel auf Katalysator und Bosch Motronic ab Juli 1979 brachte standesgemäße Werte: 8,4 Sekunden auf 60 mph, 200 km/h Spitze. Kalifornien hatte von 1977 bis 1979 eine eigene Variante (CAL) mit geänderter Zündung und Einspritzung; sie entfiel, als der US-633 CSi die kalifornischen Grenzwerte serienmäßig erfüllte. Ab Modelljahr 1987 lief der US-635 CSi als <strong>L6</strong> mit deutlich reicherer Ausstattung, ab der zweiten Modellpflege wieder als 635 CSi. Die L6-Ausstattung kam 1987 als „Highline" auch nach Europa, für 11.275 bis 12.500 DM Aufpreis.</p>
+<p><strong>Japan</strong> (JAP) entsprach beim Abgas den US-Modellen, behielt aber die schlanken europäischen Stoßstangen. Bis auf den M6 hatten dort alle Coupés Automatik; gebaut wurden sie nur bis November 1988.</p>
+<p>Bei den Veredlern ragt Alpina heraus, ab 1978 eigenständiger Fahrzeughersteller mit eigenen Fahrgestellnummern. Das B7 Turbo Coupé begann mit 300 PS und 260 km/h bei 79.990 DM – zum Vergleich kostete ein Porsche 928 damals 58.800 DM. Der Ladedruck ließ sich vom Fahrersitz aus absenken, und eine Resonanzaufladung sollte das Turboloch mildern. Vom später erschienenen Sauger B9 (ab 1982) und dessen Nachfolger B10 (ab 1985) entstanden zusammen nur 119 Fahrzeuge. Schnitzer baute 1982/83 siebzehn S6 mit 245 PS und verkaufte über hundert weitere Umbausätze; Hartge lieferte den H6s mit 241 PS, den H6sp mit 254 PS und auf M635-Basis den H6-24 mit 332 PS. In Großbritannien entstand 1978 die TWR Hallmark Edition, um Restbestände des 633 CSi abzuverkaufen – mit Alpina-Fahrwerk, handlinierten Zierstreifen und einer Aschenbecherabdeckung aus massivem Silber.</p>
+
+<h2>10. Stückzahlen und Sammlermarkt</h2>
+<p>Insgesamt entstanden 86.216 Fahrzeuge; die Quellen nennen gelegentlich auch 86.219, was auf unterschiedliche Zählweisen zurückgehen dürfte. Das letzte Exemplar, Fahrgestellnummer 1280940, wurde am 14. April 1989 gebaut und Ende Mai an einen deutschen Kunden ausgeliefert. Nachfolger wurde nicht ein neuer 6er, sondern das größere 8er-Coupé E31.</p>
+<p>Beim deutschen Bestand zeigt die Statistik des Kraftfahrt-Bundesamts eine klassische Youngtimer-Kurve: Die Zahlen fielen bis etwa 2010 ab und steigen seither wieder. Beim modellgepflegten 635 CSi (160 kW) etwa von 599 Fahrzeugen zum 1. Januar 2012 auf 1.017 zum 1. Januar 2024, beim M635 CSi von 229 auf 407. Der E24 ist damit ein Fahrzeug, das aus der Gebrauchtwagenphase heraus- und in den Sammlerbestand hineingewachsen ist. Preisniveaus nennen wir hier bewusst nicht – sie ändern sich schneller, als ein Artikel altert.</p>
+
+<div class="offene">
+<h2>Offene Punkte</h2>
+<p>Folgende Angaben sind nicht sicher verifiziert und entsprechend markiert:</p>
+<ul>
+<li><strong>Drehmomentwerte</strong> der Varianten 630 CSi (USA), 635 CSi Schweiz/Schweden, 635 CSi M30B35 (Kat und ohne Kat) sowie M635 CSi Kat / M6 – Leistungsangaben belegt, Drehmomente anhand von Werksunterlagen prüfen.</li>
+<li><strong>Leistung des US-630 CSi:</strong> Abgaskonzept gut dokumentiert, gesicherte PS-Zahl fehlt.</li>
+<li><strong>E9-Gesamtstückzahl</strong> und die genaue Zahl der ETCC-Titel des 3.0 CSL: bewusst weggelassen, nicht belastbar bestätigt.</li>
+<li><strong>cw-Wert des E24:</strong> verschiedene Angaben in der Literatur, keine unsichere Zahl genannt.</li>
+<li><strong>TWR Hallmark Edition:</strong> 26 Fahrzeuge laut Quelle, abweichende Angabe 56 im Umlauf.</li>
+<li><strong>Gesamtproduktion:</strong> 86.216 versus 86.219 – Differenz nicht aufgelöst.</li>
+</ul>
+</div>
+
+<p class="fussnote">Teilnehmerunterlage zur Ausfahrt des BMW 6er Clubs am 3. Oktober 2026 · Angaben nach bestem Wissen, unsichere Werte sind gekennzeichnet.</p>
+</main>
+
+<div id="version-badge" role="status"></div>
+<script>
+(function () {
+  var badge = document.getElementById("version-badge");
+  var v = document.querySelector('meta[name="version"]').content;
+  var d = document.querySelector('meta[name="version-date"]').content;
+  badge.textContent = "Version " + v + " · " + d;
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "v" || e.key === "V") {
+      if (/^(input|textarea)$/i.test(document.activeElement.tagName)) return;
+      badge.classList.toggle("sichtbar");
+    }
+  });
+})();
+</script>
+</body>
+</html>
