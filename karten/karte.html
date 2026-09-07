@@ -9,6 +9,13 @@
 <style>
   html, body { margin: 0; height: 100%; }
   #map { height: 100%; }
+  .menue-knopf {
+    position: absolute; top: 10px; right: 10px; z-index: 1000;
+    background: #2e1c10; color: #f8f2e4; text-decoration: none;
+    font: bold 14px/1 -apple-system, sans-serif; padding: 10px 14px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  }
+  .menue-knopf:hover { background: #4a2f1a; }
   .etappen-label {
     background: #fff; border: 2px solid #333; border-radius: 4px;
     padding: 2px 6px; font: bold 13px/1.2 -apple-system, sans-serif;
@@ -18,6 +25,12 @@
 </head>
 <body>
 <div id="map"></div>
+<a class="menue-knopf" href="../">&larr; Menü</a>
+<script>
+if (new URLSearchParams(location.search).has('static')) {
+  document.querySelector('.menue-knopf').style.display = 'none';
+}
+</script>
 <script>
 // ?etappe=1|2|3 zeigt nur eine Etappe, ohne Parameter Gesamtstrecke
 const params = new URLSearchParams(location.search);

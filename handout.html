@@ -122,6 +122,33 @@ nav.leiste a {
 }
 nav.leiste a:hover, nav.leiste a:focus-visible { color: #fff; border-bottom-color: var(--hellblau); }
 nav.leiste a:focus-visible { outline: 2px solid var(--hellblau); outline-offset: -2px; }
+nav.leiste a.menue-link { color: var(--hellblau); border-right: 1px solid rgba(255,235,200,0.25); padding-right: 16px; margin-right: 4px; }
+
+/* ––––– Tintenspar-Variante (?sw=1): reduziert, schwarzweiss ––––– */
+html.sw .bogen { background: #fff; }
+html.sw body { background: #fff; }
+html.sw img { filter: grayscale(1); }
+html.sw .cover { background: #fff; color: #000; }
+html.sw .cover-club, html.sw .cover-datum { color: #000; }
+html.sw .cover h1 { color: #000; }
+html.sw .cover-route { color: #333; }
+html.sw .cover-fakten { background: #fff; border-top-color: #000; border-bottom: 2px solid #000; }
+html.sw .cover-fakten .wert { color: #000; }
+html.sw .cover-fakten .label { color: #444; }
+html.sw .cover-fakten div { border-right-color: #ccc; }
+html.sw .cover-streifen span, html.sw .m-band span { background: #000 !important; }
+html.sw .cover-foto figcaption { background: rgba(255,255,255,0.75); color: #333; }
+html.sw .etappe-kopf { border-top-color: #000; }
+html.sw .startnummer::after { background: #000; }
+html.sw td.pikto, html.sw tr.warnung td.pikto { color: #000; }
+html.sw .zeitplan .uhr, html.sw .zeitplan li.pause .uhr { color: #000; }
+html.sw .vorlesen h3, html.sw .notfall h3 { color: #000; }
+html.sw .notfall { border-color: #000; }
+html.sw ol.regeln li::before { background: #fff; color: #000; border: 2px solid #000; }
+html.sw .bingo div.frei { background: #fff; color: #000; border-style: dashed; }
+html.sw tr.warnung td.text .hinweis { background: #eee; color: #000; }
+html.sw .etappe-daten b { color: #000; }
+html.sw .legende i { filter: grayscale(1); }
 
 /* ––––– Ablaufplan ––––– */
 .zeitplan { list-style: none; margin: 18px 0 0; padding: 0; }
@@ -373,6 +400,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
 </svg>
 
 <nav class="leiste nur-web" aria-label="Kapitel">
+  <a href="./" class="menue-link">&larr; Menü</a>
   <a href="#ablauf">Ablauf</a>
   <a href="#karte">Karte</a>
   <a href="#etappe1">Etappe 1</a>
@@ -398,12 +426,12 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
     <figcaption id="cover-credit">Foto: Ermell, BMW 635 CSi (E24), CC BY-SA 4.0</figcaption>
   </figure>
   <div class="cover-fakten">
-    <div><span class="wert">07:30</span><br><span class="label">Start</span></div>
+    <div><span class="wert">09:00</span><br><span class="label">Start</span></div>
     <div><span class="wert">180</span><br><span class="label">Kilometer</span></div>
     <div><span class="wert">3</span><br><span class="label">Bundesländer</span></div>
-    <div><span class="wert">10:00</span><br><span class="label">Werksführung</span></div>
+    <div><span class="wert">11:30</span><br><span class="label">Werksführung</span></div>
     <div><span class="wert">950&thinsp;m</span><br><span class="label">Wasserkuppe</span></div>
-    <div><span class="wert">17:45</span><br><span class="label">Rückkehr</span></div>
+    <div><span class="wert">18:30</span><br><span class="label">Rückkehr</span></div>
   </div>
 </header>
 
@@ -426,19 +454,19 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
 <section class="bogen" id="ablauf">
   <h2>Ablaufplan</h2>
   <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-  <p>Wir fahren im geschlossenen Konvoi und gemütlich – die Zeiten sind mit Puffer gerechnet. Wichtigster Fixpunkt des Tages: <strong>die Werksführung im Dampflokwerk beginnt pünktlich um 10:00 Uhr.</strong></p>
+  <p>Wir fahren im geschlossenen Konvoi und gemütlich – die Zeiten sind mit Puffer gerechnet. Wichtigster Fixpunkt des Tages: <strong>die gebuchte Werksführung im Dampflokwerk um 11:30 Uhr</strong> <span class="klein">(Planwert – Uhrzeit lt. Buchung bei der Tourleitung)</span>.</p>
   <ul class="zeitplan">
-    <li><span class="uhr">07:00</span><span class="was"><strong>Eintreffen am Hotel Bayerischer Hof</strong><span class="klein">Aufstellung auf dem Parkplatz, Fahrzeugcheck, Roadbook-Ausgabe, Kaffee aus der Thermoskanne</span></span></li>
-    <li><span class="uhr">07:15</span><span class="was"><strong>Fahrerbriefing</strong><span class="klein">Startreihenfolge, Konvoi-Regeln, Besenwagen, Funk/Telefonkette</span></span></li>
-    <li><span class="uhr">07:30</span><span class="was"><strong>Start Etappe 1 – Bad Kissingen &rarr; Meiningen</strong><span class="klein">68,6 km über B287 und B279, ca. 2&nbsp;h&nbsp;15 im Konvoi</span></span></li>
-    <li><span class="uhr">09:45</span><span class="was"><strong>Ankunft Dampflokwerk Meiningen</strong><span class="klein">Parken, Sammeln an der Pforte</span></span></li>
-    <li class="pause"><span class="uhr">10:00</span><span class="was"><strong>Werksführung Dampflokwerk</strong><span class="klein">90 Minuten – Lokhalle, Anheizhaus, Kesselschmiede. 6&nbsp;€ p.&thinsp;P., nur Barzahlung, festes Schuhwerk!</span></span></li>
-    <li><span class="uhr">11:45</span><span class="was"><strong>Kurze Stadtfahrt zur Brückenmühle</strong><span class="klein">ca. 15 Minuten, am Meininger Theater vorbei</span></span></li>
-    <li class="pause"><span class="uhr">12:00</span><span class="was"><strong>Mittagessen – Gasthof Brückenmühle</strong><span class="klein">Thüringer Küche in Walldorf an der Werra</span></span></li>
-    <li><span class="uhr">13:30</span><span class="was"><strong>Start Etappe 2 – Meiningen &rarr; Berghaus Rhön</strong><span class="klein">86,3 km durch die Hohe Rhön und über die Wasserkuppe, ca. 2&nbsp;h&nbsp;30</span></span></li>
-    <li class="pause"><span class="uhr">16:00</span><span class="was"><strong>Kaffee &amp; Kuchen – Berghaus Rhön</strong><span class="klein">Einkehr in den schwarzen Bergen bei Riedenberg</span></span></li>
-    <li><span class="uhr">17:00</span><span class="was"><strong>Start Etappe 3 – Rückfahrt nach Bad Kissingen</strong><span class="klein">25,5 km über die B286, ca. 45 Minuten</span></span></li>
-    <li><span class="uhr">17:45</span><span class="was"><strong>Ankunft Hotel Bayerischer Hof – Ausklang</strong><span class="klein">Sonnenuntergang 18:55 Uhr: wir sind rechtzeitig zurück</span></span></li>
+    <li><span class="uhr">08:30</span><span class="was"><strong>Eintreffen am Hotel Bayerischer Hof</strong><span class="klein">Aufstellung auf dem Parkplatz, Fahrzeugcheck, Roadbook-Ausgabe, Kaffee aus der Thermoskanne</span></span></li>
+    <li><span class="uhr">08:45</span><span class="was"><strong>Fahrerbriefing</strong><span class="klein">Startreihenfolge, Konvoi-Regeln, Besenwagen, Funk/Telefonkette</span></span></li>
+    <li><span class="uhr">09:00</span><span class="was"><strong>Start Etappe 1 – Bad Kissingen &rarr; Meiningen</strong><span class="klein">68,6 km über B287 und B279, ca. 2&nbsp;h&nbsp;15 im Konvoi</span></span></li>
+    <li><span class="uhr">11:15</span><span class="was"><strong>Ankunft Dampflokwerk Meiningen</strong><span class="klein">Parken, Sammeln an der Pforte</span></span></li>
+    <li class="pause"><span class="uhr">11:30</span><span class="was"><strong>Werksführung Dampflokwerk</strong><span class="klein">90 Minuten – Lokhalle, Anheizhaus, Kesselschmiede. 6&nbsp;€ p.&thinsp;P., nur Barzahlung, festes Schuhwerk!</span></span></li>
+    <li><span class="uhr">13:00</span><span class="was"><strong>Kurze Stadtfahrt zur Brückenmühle</strong><span class="klein">ca. 15 Minuten, am Meininger Theater vorbei</span></span></li>
+    <li class="pause"><span class="uhr">13:15</span><span class="was"><strong>Mittagessen – Gasthof Brückenmühle</strong><span class="klein">Thüringer Küche in Walldorf an der Werra</span></span></li>
+    <li><span class="uhr">14:30</span><span class="was"><strong>Start Etappe 2 – Meiningen &rarr; Berghaus Rhön</strong><span class="klein">86,3 km durch die Hohe Rhön und über die Wasserkuppe, ca. 2&nbsp;h&nbsp;30</span></span></li>
+    <li class="pause"><span class="uhr">17:00</span><span class="was"><strong>Kaffee &amp; Kuchen – Berghaus Rhön</strong><span class="klein">Einkehr in den schwarzen Bergen bei Riedenberg</span></span></li>
+    <li><span class="uhr">17:45</span><span class="was"><strong>Start Etappe 3 – Rückfahrt nach Bad Kissingen</strong><span class="klein">25,5 km über die B286, ca. 45 Minuten</span></span></li>
+    <li><span class="uhr">18:30</span><span class="was"><strong>Ankunft Hotel Bayerischer Hof – Ausklang</strong><span class="klein">Sonnenuntergang 18:55 Uhr: wir sind gerade noch rechtzeitig zurück</span></span></li>
   </ul>
 </section>
 
@@ -468,7 +496,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
       <div class="etappe-daten">
         <span><b>68,6</b> km</span>
         <span><b>2:15</b> h Konvoi</span>
-        <span>Start <b>07:30</b></span>
+        <span>Start <b>09:00</b></span>
         <span>Ziel: Dampflokwerk</span>
       </div>
     </div>
@@ -507,7 +535,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
     <tr><td class="nr">28</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Am Meininger Theater vorbei</td></tr>
     <tr><td class="nr">29</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Durch die Eisenbahnbrücke hindurch</td></tr>
     <tr><td class="nr">30</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Gleich nach der Eisenbahnbrücke rechts in den Templerweg</td></tr>
-    <tr class="ziel-zeile"><td class="nr">31</td><td class="pikto"><svg><use href="#i-parken"/></svg></td><td class="text">Nach der Eisenbahnunterführung rechts auf den Parkplatz – <strong>Ziel: Dampflokwerk Meiningen.</strong> Treffpunkt Pforte zur Besichtigung um 10:00 Uhr</td></tr>
+    <tr class="ziel-zeile"><td class="nr">31</td><td class="pikto"><svg><use href="#i-parken"/></svg></td><td class="text">Nach der Eisenbahnunterführung rechts auf den Parkplatz – <strong>Ziel: Dampflokwerk Meiningen.</strong> Treffpunkt Pforte zur Besichtigung um 11:30 Uhr</td></tr>
   </table>
 
   <p class="zwischen">Nach der Führung: Weiterfahrt zum Mittagessen</p>
@@ -535,8 +563,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
     <div class="stopp-info">
       <h3>Mittag: Gasthof Brückenmühle</h3>
       <p class="adresse">Brückenmühle 2, 98617 Meiningen OT Walldorf<br><span class="tel">Tel. 03693 801004</span></p>
-      <p class="klein">Restaurant täglich 11–22 Uhr · Thüringer und italienische Küche (Mittagskarte u.&thinsp;a. Thüringer Rinderroulade, Schweinebraten mit Sauerkraut, gebratene Kloßscheiben) · Parkplatz für die Kolonne rechts</p>
-      <p class="klein">Speisekarte online: <a href="https://restaurant-brueckenmuehle.de/speisekarte/">restaurant-brueckenmuehle.de/speisekarte</a></p>
+      <p class="klein">Thüringer Küche · für unsere Gruppe sind feste Gerichte vorbereitet · Parkplatz für die Kolonne rechts</p>
     </div>
   </div>
 </section>
@@ -550,7 +577,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
       <div class="etappe-daten">
         <span><b>86,3</b> km</span>
         <span><b>2:30</b> h Konvoi</span>
-        <span>Start <b>13:30</b></span>
+        <span>Start <b>14:30</b></span>
         <span>Über die Wasserkuppe</span>
       </div>
     </div>
@@ -602,7 +629,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
       <div class="etappe-daten">
         <span><b>25,5</b> km</span>
         <span><b>0:45</b> h Konvoi</span>
-        <span>Start <b>17:00</b></span>
+        <span>Start <b>17:45</b></span>
         <span>Ziel: Hotel Bayerischer Hof</span>
       </div>
     </div>
@@ -817,6 +844,10 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
 
 <div id="version-badge" role="status"></div>
 <script>
+// Tintenspar-Variante fuer den Druck
+if (new URLSearchParams(location.search).has("sw")) {
+  document.documentElement.classList.add("sw");
+}
 (function () {
   var badge = document.getElementById("version-badge");
   var v = document.querySelector('meta[name="version"]').content;
