@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadbook – BMW 6er Club Ausfahrt 03.10.2026</title>
+<meta name="description" content="Roadbook der BMW 6er Club Ausfahrt am 03.10.2026: Bad Kissingen – Meiningen – Rhön – Bad Kissingen, 3 Etappen, ca. 180 km.">
+<meta name="version" content="1.0.0">
+<meta name="version-date" content="2026-09-07">
+<style>
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish Condensed"; src: url("assets/fonts/DINishCondensed-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "DINish Condensed"; src: url("assets/fonts/DINishCondensed-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+
+:root {
+  /* 70er-Palette der E24-Ära: Inka-Orange, Ocker, Sienabraun, Cremeweiß */
+  --blau: #b4441c;        /* Rotton – Etappe 1 (Tokenname historisch) */
+  --rot: #6f4520;         /* Braun – Etappe 2 */
+  --gruen: #7c5f2b;       /* Dunkel-Beige/Bronze – Etappe 3 */
+  --nacht: #2e1c10;       /* Cover-Grund, dunkles Schokobraun */
+  --hellblau: #d98e24;    /* Ocker – Streifen (Tokenname historisch) */
+  --ink: #2a1f14;
+  --ink-2: #6b5d4a;
+  --papier: #f8f2e4;
+  --grau: #efe6d2;
+  --linie: #d9cbb0;
+  --warn: #a34c00;
+  --warn-bg: #f3dfae;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "DINish", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: #c3b294;
+}
+::selection { background: var(--blau); color: #fff; }
+
+/* ––––– Bogen-Layout: jede Sektion ein „Blatt" ––––– */
+.bogen {
+  background: var(--papier);
+  max-width: 760px;
+  margin: 0 auto 18px;
+  padding: 40px 44px 48px;
+  box-shadow: 0 2px 14px rgba(16, 24, 40, 0.18);
+}
+@media (max-width: 640px) {
+  .bogen { padding: 26px 20px 34px; margin-bottom: 10px; }
+}
+
+h1, h2, h3 { font-family: "DINish Condensed", "Arial Narrow", sans-serif; line-height: 1.06; margin: 0; }
+h2 {
+  font-size: 2.1rem; font-weight: 900; letter-spacing: 0.01em;
+  text-transform: uppercase; margin-bottom: 4px;
+}
+h3 { font-size: 1.25rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; margin: 28px 0 8px; }
+p { margin: 0 0 12px; max-width: 68ch; }
+.klein { font-size: 0.85rem; color: var(--ink-2); }
+
+/* Speedline im Stil der 70er: drei schräge Balken */
+.m-band { display: flex; gap: 7px; height: 11px; margin: 14px 0 26px; }
+.m-band span { transform: skewX(-24deg); }
+.m-band span:nth-child(1) { width: 74px; background: #d75428; }
+.m-band span:nth-child(2) { width: 30px; background: var(--hellblau); }
+.m-band span:nth-child(3) { width: 15px; background: #8a5a1e; }
+.m-band span:nth-child(4) { display: none; }
+
+/* ––––– Cover ––––– */
+.cover {
+  background: var(--nacht); color: #fff;
+  padding: 0; overflow: hidden;
+  display: flex; flex-direction: column; min-height: min(92svh, 880px);
+}
+.cover-streifen { display: flex; height: 16px; }
+.cover-streifen span:nth-child(1) { flex: 1; background: #d75428; }
+.cover-streifen span:nth-child(2) { flex: 1; background: var(--hellblau); }
+.cover-streifen span:nth-child(3) { flex: 1; background: #8a5a1e; }
+.cover-inhalt { padding: 46px 44px 20px; }
+.cover-club { font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.95rem; color: var(--hellblau); }
+.cover h1 {
+  font-size: clamp(3.4rem, 11vw, 5.6rem); font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.005em; color: #fff;
+  margin: 6px 0 2px;
+}
+.cover-datum { font-family: "DINish Condensed"; font-weight: 700; font-size: 1.5rem; text-transform: uppercase; color: #fff; }
+.cover-route { margin-top: 14px; font-size: 1.02rem; color: #dcc79c; max-width: 46ch; }
+.cover-foto { margin-top: auto; position: relative; }
+.cover-foto img { display: block; width: 100%; height: 340px; object-fit: cover; }
+.cover-foto figcaption {
+  position: absolute; right: 12px; bottom: 8px; font-size: 0.68rem;
+  color: rgba(255,255,255,0.78); background: rgba(46,28,16,0.6); padding: 2px 8px;
+}
+.cover-fakten {
+  display: flex; flex-wrap: nowrap; gap: 0; border-top: 4px solid #d75428;
+  background: #201107;
+}
+.cover-fakten div { flex: 1 1 0; min-width: 0; padding: 14px 6px 16px; text-align: center; border-right: 1px solid rgba(255,235,200,0.16); }
+.cover-fakten div:last-child { border-right: 0; }
+.cover-fakten .wert { font-family: "DINish Condensed"; font-weight: 900; font-size: clamp(1.15rem, 3.4vw, 1.9rem); color: #fff; }
+.cover-fakten .label { font-size: clamp(0.55rem, 1.4vw, 0.78rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #e3c795; white-space: nowrap; }
+
+/* ––––– Web-Navigation (nicht im Druck) ––––– */
+nav.leiste {
+  position: sticky; top: 0; z-index: 30;
+  background: var(--nacht);
+  display: flex; gap: 2px; overflow-x: auto;
+  padding: 0 8px;
+  -webkit-overflow-scrolling: touch;
+}
+nav.leiste a {
+  color: #e0cda4; text-decoration: none; white-space: nowrap;
+  font-family: "DINish Condensed"; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; font-size: 0.92rem;
+  padding: 12px 12px 10px; border-bottom: 3px solid transparent;
+}
+nav.leiste a:hover, nav.leiste a:focus-visible { color: #fff; border-bottom-color: var(--hellblau); }
+nav.leiste a:focus-visible { outline: 2px solid var(--hellblau); outline-offset: -2px; }
+
+/* ––––– Ablaufplan ––––– */
+.zeitplan { list-style: none; margin: 18px 0 0; padding: 0; }
+.zeitplan li {
+  display: grid; grid-template-columns: 84px 1fr; gap: 16px;
+  padding: 10px 0; border-bottom: 1px solid var(--linie);
+  align-items: baseline;
+}
+.zeitplan li:last-child { border-bottom: 0; }
+.zeitplan .uhr {
+  font-family: "DINish Condensed"; font-weight: 900; font-size: 1.45rem;
+  font-variant-numeric: tabular-nums; color: var(--blau);
+}
+.zeitplan li.pause .uhr { color: var(--rot); }
+.zeitplan .was strong { font-weight: 700; }
+.zeitplan .was .klein { display: block; margin-top: 1px; }
+
+/* ––––– Karten ––––– */
+.karte-rahmen { margin: 18px 0 6px; border: 2px solid var(--ink); }
+.karte-rahmen img { display: block; width: 100%; height: auto; }
+.legende { display: flex; flex-wrap: wrap; gap: 14px 22px; margin: 10px 0 0; font-size: 0.9rem; }
+.legende span { display: inline-flex; align-items: center; gap: 7px; }
+.legende i { width: 26px; height: 5px; display: inline-block; }
+.web-karte-link { margin-top: 14px; }
+
+/* ––––– Etappenkopf: Rallye-Startnummer auf Papier ––––– */
+.e1 { --etappe: var(--blau); }
+.e2 { --etappe: var(--rot); }
+.e3 { --etappe: var(--gruen); }
+.etappe-kopf {
+  display: grid; grid-template-columns: 76px 1fr; gap: 22px; align-items: center;
+  padding: 18px 0 16px; margin-bottom: 22px;
+  border-top: 6px solid var(--etappe); border-bottom: 2px solid var(--ink);
+}
+.startnummer {
+  width: 76px; height: 76px; background: #fff; border: 3px solid var(--ink);
+  display: grid; place-items: center; position: relative;
+  font-family: "DINish Condensed"; font-weight: 900; font-size: 2.7rem; color: var(--ink);
+}
+.startnummer::after {
+  content: ""; position: absolute; top: -3px; right: -3px;
+  width: 17px; height: 17px; background: var(--etappe);
+}
+.etappe-kopf h2 { color: var(--ink); font-size: 1.85rem; margin: 0 0 8px; }
+.etappe-daten { display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 0.92rem; color: var(--ink-2); }
+.etappe-daten b { font-family: "DINish Condensed"; font-weight: 900; font-size: 1.3rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 480px) {
+  .etappe-kopf { grid-template-columns: 58px 1fr; gap: 14px; }
+  .startnummer { width: 58px; height: 58px; font-size: 2rem; }
+  .etappe-kopf h2 { font-size: 1.4rem; }
+}
+
+/* ––––– Roadbook-Tabelle ––––– */
+table.roadbook { width: 100%; border-collapse: collapse; margin: 6px 0 10px; }
+table.roadbook td { padding: 8px 8px 8px 0; border-bottom: 1px solid var(--linie); vertical-align: middle; }
+table.roadbook tr:last-child td { border-bottom: 2px solid var(--ink); }
+td.nr {
+  width: 44px; font-family: "DINish Condensed"; font-weight: 900; font-size: 1.3rem;
+  font-variant-numeric: tabular-nums; color: var(--ink-2); text-align: right; padding-right: 12px;
+}
+td.pikto { width: 52px; }
+td.pikto svg { display: block; width: 38px; height: 38px; }
+.e1 td.pikto { color: var(--blau); }
+.e2 td.pikto { color: var(--rot); }
+.e3 td.pikto { color: var(--gruen); }
+tr.warnung td.pikto { color: var(--warn); }
+td.text { font-size: 1.02rem; line-height: 1.4; }
+tr.warnung td.text .hinweis {
+  display: inline-block; background: var(--warn-bg); color: var(--warn);
+  font-weight: 700; padding: 1px 8px; margin-top: 3px; border-radius: 2px;
+}
+tr.ziel-zeile td { background: var(--grau); }
+tr.ziel-zeile td.text { font-weight: 700; }
+.zwischen {
+  font-family: "DINish Condensed"; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; font-size: 1.02rem; color: var(--ink-2);
+  margin: 22px 0 2px;
+}
+
+/* ––––– Stopp-Karten ––––– */
+.stopp { display: grid; grid-template-columns: 190px 1fr; gap: 0 20px; margin: 22px 0; border: 2px solid var(--ink); }
+.stopp img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.stopp-info { padding: 14px 18px 16px 0; }
+.stopp-info h3 { margin-top: 0; }
+.stopp-info .adresse { font-weight: 600; }
+.stopp-info .tel { font-variant-numeric: tabular-nums; }
+.stopp.ohne-bild { grid-template-columns: 1fr; border-left-width: 2px; }
+.stopp.ohne-bild .stopp-info { padding: 14px 18px 16px 18px; }
+@media (max-width: 560px) {
+  .stopp { grid-template-columns: 1fr; }
+  .stopp img { height: 170px; }
+  .stopp-info { padding: 12px 16px 14px 16px; }
+}
+
+/* ––––– Sehenswürdigkeiten ––––– */
+.vorlesen article { margin: 0 0 22px; }
+.vorlesen h3 { color: var(--blau); margin-top: 0; }
+.wappen-zeile { display: flex; align-items: center; gap: 12px; }
+.wappen-zeile img { width: 40px; height: auto; flex: 0 0 auto; }
+.wappen-zeile h3 { margin: 0; }
+.vorlesen figure { margin: 10px 0 6px; }
+.vorlesen figure img { width: 100%; height: 220px; object-fit: cover; display: block; border: 2px solid var(--ink); }
+.vorlesen figcaption { font-size: 0.72rem; color: var(--ink-2); margin-top: 3px; }
+
+/* ––––– Regeln ––––– */
+ol.regeln { margin: 14px 0 0; padding: 0; list-style: none; counter-reset: regel; }
+ol.regeln li {
+  counter-increment: regel; position: relative;
+  padding: 9px 0 9px 52px; border-bottom: 1px solid var(--linie);
+}
+ol.regeln li::before {
+  content: counter(regel);
+  position: absolute; left: 0; top: 8px;
+  width: 34px; height: 34px; display: grid; place-items: center;
+  background: var(--nacht); color: #fff;
+  font-family: "DINish Condensed"; font-weight: 900; font-size: 1.2rem;
+}
+.notfall {
+  margin-top: 26px; border: 3px solid var(--rot); padding: 16px 18px;
+}
+.notfall h3 { color: var(--rot); margin-top: 0; }
+.notfall table { border-collapse: collapse; width: 100%; }
+.notfall td { padding: 5px 12px 5px 0; vertical-align: top; }
+.notfall td:first-child { font-weight: 700; white-space: nowrap; }
+.platzhalter { color: var(--ink-2); background: var(--grau); padding: 0 6px; font-style: italic; }
+
+/* ––––– Orga-Checkliste ––––– */
+ul.checkliste { list-style: none; margin: 12px 0 0; padding: 0; }
+ul.checkliste li { padding: 7px 0 7px 34px; position: relative; border-bottom: 1px solid var(--linie); }
+ul.checkliste li::before {
+  content: ""; position: absolute; left: 0; top: 10px;
+  width: 16px; height: 16px; border: 2px solid var(--ink);
+}
+
+/* ––––– Teilnehmerliste ––––– */
+table.teilnehmer { width: 100%; border-collapse: collapse; margin-top: 14px; }
+table.teilnehmer th {
+  font-family: "DINish Condensed"; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; font-size: 0.85rem; text-align: left;
+  border-bottom: 2px solid var(--ink); padding: 6px 8px 6px 0;
+}
+table.teilnehmer td { border-bottom: 1px solid var(--linie); padding: 10px 8px 10px 0; height: 26px; font-variant-numeric: tabular-nums; }
+table.teilnehmer td.lfd { font-family: "DINish Condensed"; font-weight: 900; color: var(--ink-2); width: 34px; }
+
+/* ––––– Quiz + Bingo ––––– */
+ol.quiz { margin: 14px 0 0; padding-left: 0; list-style: none; counter-reset: frage; }
+ol.quiz li { counter-increment: frage; padding: 8px 0 8px 40px; position: relative; }
+ol.quiz li::before {
+  content: counter(frage) "."; position: absolute; left: 4px;
+  font-family: "DINish Condensed"; font-weight: 900; font-size: 1.2rem; color: var(--blau);
+}
+.aufloesung { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--linie); }
+.aufloesung p { font-size: 0.78rem; color: var(--ink-2); transform: rotate(180deg); max-width: none; }
+.bingo { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 14px; }
+.bingo div {
+  border: 2px solid var(--ink); aspect-ratio: 1; display: grid; place-items: center;
+  text-align: center; padding: 6px; font-size: 0.88rem; line-height: 1.2; font-weight: 600;
+  hyphens: auto; overflow-wrap: break-word; min-width: 0;
+}
+@media (max-width: 480px) { .bingo div { font-size: 0.72rem; padding: 4px; } }
+.bingo div.frei { background: var(--nacht); color: #fff; font-family: "DINish Condensed"; font-weight: 900; text-transform: uppercase; }
+
+/* ––––– Rückseite ––––– */
+.rueck { text-align: center; }
+.rueck .qr-box {
+  width: 150px; height: 150px; margin: 18px auto 8px; border: 2px dashed var(--ink-2);
+  display: grid; place-items: center; color: var(--ink-2); font-size: 0.8rem; padding: 10px;
+}
+.rueck .qr-box img { width: 100%; height: 100%; }
+.lizenzen { margin-top: 30px; text-align: left; font-size: 0.72rem; color: var(--ink-2); }
+.lizenzen p { max-width: none; margin-bottom: 4px; }
+
+/* Version-Badge (Taste V) */
+#version-badge {
+  position: fixed; right: 12px; bottom: 12px; z-index: 99;
+  background: var(--nacht); color: #fff; font-size: 0.8rem;
+  padding: 6px 12px; display: none;
+}
+#version-badge.sichtbar { display: block; }
+
+/* ––––– Druck: A5-Roadbook ––––– */
+@page { size: A5; margin: 11mm 10mm 13mm; }
+@media print {
+  body { background: #fff; font-size: 9.4pt; line-height: 1.42; }
+  nav.leiste, .web-karte-link, #version-badge, .nur-web { display: none !important; }
+  .bogen {
+    max-width: none; margin: 0; padding: 0;
+    box-shadow: none;
+    break-after: page;
+  }
+  .bogen:last-child { break-after: auto; }
+  .cover { min-height: 185mm; }
+  .cover-inhalt { padding: 16mm 10mm 6mm; }
+  .cover-foto img { height: 62mm; }
+  .etappe-kopf { margin-bottom: 12px; padding: 10px 0 8px; }
+  .startnummer { width: 52px; height: 52px; font-size: 1.8rem; }
+  h2 { font-size: 17pt; }
+  td.text { font-size: 9.4pt; }
+  td.pikto svg { width: 26px; height: 26px; }
+  td.nr { font-size: 10.5pt; }
+  table.roadbook td { padding: 4px 6px 4px 0; }
+  tr, .stopp, .zeitplan li, ol.regeln li, .bingo, article, .notfall { break-inside: avoid; }
+  .zeitplan li { padding: 4px 0; grid-template-columns: 62px 1fr; gap: 10px; }
+  .zeitplan .uhr { font-size: 1.05rem; }
+  .zeitplan .was .klein { font-size: 7.6pt; }
+  table.teilnehmer td { height: 18px; padding: 7px 8px 7px 0; }
+  .bingo-block { break-inside: avoid; }
+  .bingo div { aspect-ratio: auto; min-height: 21mm; }
+  .vorlesen figure img { height: 150px; }
+  a { color: inherit; text-decoration: none; }
+  .stopp img { min-height: 100%; }
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: Ein echtes Rallye-Bordbuch, kein dekoriertes PDF – die Seite verweigert
+das generische Event-Flyer-Layout (Hero + Karten-Grid) und ist als durchnummeriertes
+Streckendokument gebaut, das der Beifahrer im fahrenden E24 vorliest.
+OWN-WORLD: DIN-1451-Verkehrsschrift (DINish), Papierweiß mit schwarzen
+Werkslinien, BMW-Motorsport-Band (Hellblau/Nachtblau/Rot), Etappenfarben
+Blau/Rot/Grün, Piktogramme in einer Strichstärke wie Verkehrszeichen.
+STORY: Teilnehmer wissen in Sekunden: wann losfahren, wo abbiegen, wo essen,
+wen anrufen wenn der Konvoi reißt – und haben dabei das Gefühl, ein Stück
+Motorsportgeschichte in der Hand zu halten.
+FIRST VIEWPORT: Nachtblaues Cover, M-Streifen oben, AUSFAHRT in DIN-Schwarzschrift,
+Datum, E24-Foto als Bühne, Faktenleiste (180 km / 3 Etappen / 5 Stationen).
+FORM: Rallye-Roadbook der E24-Ära, gepinnt durch Nutzerwahl (Brief schlägt Roll).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the
+finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="pf-basis" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></g>
+    <symbol id="i-geradeaus" viewBox="0 0 64 64"><path d="M32 54 V18 M22 26 L32 12 L42 26" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rechts" viewBox="0 0 64 64"><path d="M26 54 V30 Q26 22 34 22 H46 M38 32 L50 22 L38 12" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-links" viewBox="0 0 64 64"><path d="M38 54 V30 Q38 22 30 22 H18 M26 32 L14 22 L26 12" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-halblinks" viewBox="0 0 64 64"><path d="M36 54 V34 L22 20 M22 32 V18 H36" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-kreisel" viewBox="0 0 64 64"><circle cx="32" cy="34" r="13" fill="none" stroke="currentColor" stroke-width="6"/><path d="M32 21 V8 M25 14 L32 6 L39 14" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ampel" viewBox="0 0 64 64"><rect x="22" y="8" width="20" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="32" cy="19" r="4.5" fill="currentColor"/><circle cx="32" cy="30" r="4.5" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="41" r="4.5" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+    <symbol id="i-achtung" viewBox="0 0 64 64"><path d="M32 10 L56 52 H8 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M32 25 V38" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="45" r="3" fill="currentColor"/></symbol>
+    <symbol id="i-ziel" viewBox="0 0 64 64"><path d="M16 56 V10" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M16 10 H50 V34 H16 Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M16 10 H24.5 V18 H33 V26 H41.5 V34 H50 V26 H41.5 V18 H33 V10 H41.5 M16 18 H24.5 V26 H16 M24.5 26 H33 V34 H24.5 Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-start" viewBox="0 0 64 64"><path d="M18 56 V10" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M18 12 L48 20 L18 30" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="i-gipfel" viewBox="0 0 64 64"><path d="M8 52 L26 22 L36 38 L44 28 L56 52 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-parken" viewBox="0 0 64 64"><rect x="10" y="10" width="44" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="5"/><path d="M26 44 V20 H36 Q43 20 43 27 Q43 34 36 34 H26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<nav class="leiste nur-web" aria-label="Kapitel">
+  <a href="#ablauf">Ablauf</a>
+  <a href="#karte">Karte</a>
+  <a href="#etappe1">Etappe 1</a>
+  <a href="#etappe2">Etappe 2</a>
+  <a href="#etappe3">Etappe 3</a>
+  <a href="#vorlesen">Unterwegs</a>
+  <a href="#konvoi">Konvoi</a>
+  <a href="#teilnehmer">Teilnehmer</a>
+  <a href="#spass">Quiz</a>
+</nav>
+
+<!-- ══════════ COVER ══════════ -->
+<header class="bogen cover">
+  <div class="cover-streifen" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="cover-inhalt">
+    <p class="cover-club">BMW 6er Club</p>
+    <h1>Ausfahrt</h1>
+    <p class="cover-datum">Samstag, 3. Oktober 2026</p>
+    <p class="cover-route">Bad Kissingen &rarr; Dampflokwerk Meiningen &rarr; Hohe Rhön &amp; Wasserkuppe &rarr; Bad Kissingen. Ein Tag, drei Etappen, drei Bundes&shy;länder – und Kurven, für die dieser Wagen gebaut wurde.</p>
+  </div>
+  <figure class="cover-foto">
+    <img src="assets/img/bmw-e24.jpg" alt="BMW 6er Coupé (E24)">
+    <figcaption id="cover-credit">Foto: Ermell, BMW 635 CSi (E24), CC BY-SA 4.0</figcaption>
+  </figure>
+  <div class="cover-fakten">
+    <div><span class="wert">07:30</span><br><span class="label">Start</span></div>
+    <div><span class="wert">180</span><br><span class="label">Kilometer</span></div>
+    <div><span class="wert">3</span><br><span class="label">Bundesländer</span></div>
+    <div><span class="wert">10:00</span><br><span class="label">Werksführung</span></div>
+    <div><span class="wert">950&thinsp;m</span><br><span class="label">Wasserkuppe</span></div>
+    <div><span class="wert">17:45</span><br><span class="label">Rückkehr</span></div>
+  </div>
+</header>
+
+<!-- ══════════ GRUSSWORT ══════════ -->
+<section class="bogen" id="gruss">
+  <h2>Herzlich willkommen!</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="stopp" id="tourleitung">
+    <img src="assets/img/markus-renner.jpg" alt="Markus Renner, Tourleitung">
+    <div class="stopp-info" style="padding-top:16px">
+      <p>Liebe 6er-Freunde,</p>
+      <p>schön, dass ihr dabei seid! Vor uns liegen rund 180 Kilometer durch drei Bundesländer: Kurven durch die Hohe Rhön, ein Blick hinter die Tore des Dampflokwerks Meiningen und genug Pausen für Benzingespräche, Thüringer Küche und Kaffee mit Aussicht. Unsere Haifischnasen wurden für genau solche Tage gebaut.</p>
+      <p>Fahrt entspannt, haltet den Konvoi zusammen und habt Spaß. Und wer am Ende die meisten Bingo-Felder voll hat, muss trotzdem keine Runde ausgeben – versprochen.</p>
+      <p>Gute Fahrt und allzeit freie Strecke!<br><strong>Euer Markus Renner</strong><br><span class="klein">Tourleitung</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABLAUFPLAN ══════════ -->
+<section class="bogen" id="ablauf">
+  <h2>Ablaufplan</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <p>Wir fahren im geschlossenen Konvoi und gemütlich – die Zeiten sind mit Puffer gerechnet. Wichtigster Fixpunkt des Tages: <strong>die Werksführung im Dampflokwerk beginnt pünktlich um 10:00 Uhr.</strong></p>
+  <ul class="zeitplan">
+    <li><span class="uhr">07:00</span><span class="was"><strong>Eintreffen am Hotel Bayerischer Hof</strong><span class="klein">Aufstellung auf dem Parkplatz, Fahrzeugcheck, Roadbook-Ausgabe, Kaffee aus der Thermoskanne</span></span></li>
+    <li><span class="uhr">07:15</span><span class="was"><strong>Fahrerbriefing</strong><span class="klein">Startreihenfolge, Konvoi-Regeln, Besenwagen, Funk/Telefonkette</span></span></li>
+    <li><span class="uhr">07:30</span><span class="was"><strong>Start Etappe 1 – Bad Kissingen &rarr; Meiningen</strong><span class="klein">68,6 km über B287 und B279, ca. 2&nbsp;h&nbsp;15 im Konvoi</span></span></li>
+    <li><span class="uhr">09:45</span><span class="was"><strong>Ankunft Dampflokwerk Meiningen</strong><span class="klein">Parken, Sammeln an der Pforte</span></span></li>
+    <li class="pause"><span class="uhr">10:00</span><span class="was"><strong>Werksführung Dampflokwerk</strong><span class="klein">90 Minuten – Lokhalle, Anheizhaus, Kesselschmiede. 6&nbsp;€ p.&thinsp;P., nur Barzahlung, festes Schuhwerk!</span></span></li>
+    <li><span class="uhr">11:45</span><span class="was"><strong>Kurze Stadtfahrt zur Brückenmühle</strong><span class="klein">ca. 15 Minuten, am Meininger Theater vorbei</span></span></li>
+    <li class="pause"><span class="uhr">12:00</span><span class="was"><strong>Mittagessen – Gasthof Brückenmühle</strong><span class="klein">Thüringer Küche in Walldorf an der Werra</span></span></li>
+    <li><span class="uhr">13:30</span><span class="was"><strong>Start Etappe 2 – Meiningen &rarr; Berghaus Rhön</strong><span class="klein">86,3 km durch die Hohe Rhön und über die Wasserkuppe, ca. 2&nbsp;h&nbsp;30</span></span></li>
+    <li class="pause"><span class="uhr">16:00</span><span class="was"><strong>Kaffee &amp; Kuchen – Berghaus Rhön</strong><span class="klein">Einkehr in den schwarzen Bergen bei Riedenberg</span></span></li>
+    <li><span class="uhr">17:00</span><span class="was"><strong>Start Etappe 3 – Rückfahrt nach Bad Kissingen</strong><span class="klein">25,5 km über die B286, ca. 45 Minuten</span></span></li>
+    <li><span class="uhr">17:45</span><span class="was"><strong>Ankunft Hotel Bayerischer Hof – Ausklang</strong><span class="klein">Sonnenuntergang 18:55 Uhr: wir sind rechtzeitig zurück</span></span></li>
+  </ul>
+</section>
+
+<!-- ══════════ STRECKENÜBERSICHT ══════════ -->
+<section class="bogen" id="karte">
+  <h2>Die Strecke</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <p>Ein Rundkurs von rund 180 Kilometern: aus dem Saaletal hinauf nach Thüringen, quer durch das Biosphärenreservat Rhön und über den höchsten Berg Hessens wieder zurück nach Unterfranken.</p>
+  <figure class="karte-rahmen">
+    <img src="karten/gesamt.jpg" alt="Übersichtskarte des Rundkurses mit allen drei Etappen">
+  </figure>
+  <div class="legende">
+    <span><i style="background:var(--blau)"></i> Etappe 1 · 68,6 km</span>
+    <span><i style="background:var(--rot)"></i> Etappe 2 · 86,3 km</span>
+    <span><i style="background:#c8a25e"></i> Etappe 3 · 25,5 km</span>
+  </div>
+  <p class="klein" style="margin-top:10px">Kartendaten: &copy; OpenStreetMap-Mitwirkende</p>
+  <p class="web-karte-link nur-web"><a href="karten/karte.html">Interaktive Karte öffnen</a> · <a href="karten/ausfahrt.gpx" download>GPX für Navi laden</a></p>
+</section>
+
+<!-- ══════════ ETAPPE 1 ══════════ -->
+<section class="bogen e1" id="etappe1">
+  <div class="etappe-kopf">
+    <div class="startnummer" aria-hidden="true">1</div>
+    <div>
+      <h2><span class="sr">Etappe 1: </span>Bad Kissingen &rarr; Meiningen</h2>
+      <div class="etappe-daten">
+        <span><b>68,6</b> km</span>
+        <span><b>2:15</b> h Konvoi</span>
+        <span>Start <b>07:30</b></span>
+        <span>Ziel: Dampflokwerk</span>
+      </div>
+    </div>
+  </div>
+  <figure class="karte-rahmen">
+    <img src="karten/e1.jpg" alt="Karte der Etappe 1 von Bad Kissingen nach Meiningen">
+  </figure>
+  <table class="roadbook">
+    <tr><td class="nr">1</td><td class="pikto"><svg><use href="#i-start"/></svg></td><td class="text"><strong>START</strong> Hotel Bayerischer Hof – Ausfahrt Hotelparkplatz nach rechts in die Maxstraße</td></tr>
+    <tr><td class="nr">2</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Straßenverlauf folgen in die Theresienstraße</td></tr>
+    <tr><td class="nr">3</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Rechts abbiegen in die Ludwigstraße</td></tr>
+    <tr><td class="nr">4</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Nach der Ludwigsbrücke rechts in die Bismarckstraße, Richtung Saline/Flugplatz</td></tr>
+    <tr><td class="nr">5</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Geradeaus am Flugplatz vorbei</td></tr>
+    <tr><td class="nr">6</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Rechts in die Klaushofstraße abbiegen und über die Nordbrücke fahren</td></tr>
+    <tr><td class="nr">7</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Rechts in die Straße Untere Saline abbiegen</td></tr>
+    <tr><td class="nr">8</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Immer geradeaus: dem Nordring, dann dem Ostring folgen</td></tr>
+    <tr><td class="nr">9</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text">Große Ampelkreuzung: <strong>links</strong> auf die B287 Münnerstädter Straße nach Nüdlingen</td></tr>
+    <tr><td class="nr">10</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Immer geradeaus bis Nüdlingen und durch Nüdlingen hindurch</td></tr>
+    <tr><td class="nr">11</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text">Große Ampelkreuzung: <strong>rechts</strong> auf die B287 nach Münnerstadt</td></tr>
+    <tr><td class="nr">12</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Nach dem Ortseingang Münnerstadt der B287 folgen bis zur großen Ampelkreuzung</td></tr>
+    <tr><td class="nr">13</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Links auf die B287 Meininger Straße, Richtung Bad Neustadt</td></tr>
+    <tr><td class="nr">14</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Bis Bad Neustadt immer geradeaus</td></tr>
+    <tr><td class="nr">15</td><td class="pikto"><svg><use href="#i-kreisel"/></svg></td><td class="text">Kreisel Bad Neustadt: zweite Ausfahrt, weiter geradeaus</td></tr>
+    <tr><td class="nr">16</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text">Durch Bad Neustadt bis zur Ampelkreuzung: <strong>rechts</strong> auf die B279 Richtung Mellrichstadt</td></tr>
+    <tr><td class="nr">17</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Immer geradeaus Richtung Mellrichstadt</td></tr>
+    <tr><td class="nr">18</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">In Mellrichstadt rechts der Vorfahrtstraße folgen</td></tr>
+    <tr><td class="nr">19</td><td class="pikto"><svg><use href="#i-kreisel"/></svg></td><td class="text">Kreisel: zweite Ausfahrt Richtung Meiningen</td></tr>
+    <tr><td class="nr">20</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Am Bahnhof vorbei</td></tr>
+    <tr><td class="nr">21</td><td class="pikto"><svg><use href="#i-kreisel"/></svg></td><td class="text">Nächster Kreisel: zweite Ausfahrt Richtung Meiningen</td></tr>
+    <tr><td class="nr">22</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text">Ampelkreuzung: <strong>rechts</strong> in die Meininger Landstraße Richtung Meiningen</td></tr>
+    <tr><td class="nr">23</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Der Straße weiter folgen</td></tr>
+    <tr><td class="nr">24</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Vor Henneberg links in die Henneberger Straße Richtung Meiningen</td></tr>
+    <tr><td class="nr">25</td><td class="pikto"><svg><use href="#i-kreisel"/></svg></td><td class="text">Kreisel: zweite Ausfahrt, weiter auf der Henneberger Straße</td></tr>
+    <tr class="warnung"><td class="nr">26</td><td class="pikto"><svg><use href="#i-achtung"/></svg></td><td class="text">Durch Meiningen fahren bis zur Querstraße mit Ampel<br><span class="hinweis">Fester Blitzer an der Ortseinfahrt Meiningen – Tempo 50!</span></td></tr>
+    <tr><td class="nr">27</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text"><strong>Links</strong> in die Marienstraße abbiegen, Richtung Suhl/Eisenach</td></tr>
+    <tr><td class="nr">28</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Am Meininger Theater vorbei</td></tr>
+    <tr><td class="nr">29</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Durch die Eisenbahnbrücke hindurch</td></tr>
+    <tr><td class="nr">30</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Gleich nach der Eisenbahnbrücke rechts in den Templerweg</td></tr>
+    <tr class="ziel-zeile"><td class="nr">31</td><td class="pikto"><svg><use href="#i-parken"/></svg></td><td class="text">Nach der Eisenbahnunterführung rechts auf den Parkplatz – <strong>Ziel: Dampflokwerk Meiningen.</strong> Treffpunkt Pforte zur Besichtigung um 10:00 Uhr</td></tr>
+  </table>
+
+  <p class="zwischen">Nach der Führung: Weiterfahrt zum Mittagessen</p>
+  <table class="roadbook">
+    <tr><td class="nr">32</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Parkplatz nach rechts verlassen</td></tr>
+    <tr><td class="nr">33</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Gleich wieder rechts auf die Ernststraße</td></tr>
+    <tr><td class="nr">34</td><td class="pikto"><svg><use href="#i-halblinks"/></svg></td><td class="text">Halb links auf die Robert-Koch-Straße</td></tr>
+    <tr><td class="nr">35</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Weiter geradeaus in die Adelheidstraße</td></tr>
+    <tr><td class="nr">36</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Nach rechts in die Rohrer Straße</td></tr>
+    <tr><td class="nr">37</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Durch die Eisenbahnunterführung geradeaus, weiter auf der Marienstraße</td></tr>
+    <tr><td class="nr">38</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Wieder am Meininger Theater vorbei</td></tr>
+    <tr><td class="nr">39</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text">Nach dem Theater an der Ampel <strong>links</strong> in die Landsberger Straße</td></tr>
+    <tr class="ziel-zeile"><td class="nr">40</td><td class="pikto"><svg><use href="#i-ziel"/></svg></td><td class="text">Der Straße folgen bis zum <strong>Gasthof Brückenmühle</strong> – Parkplatz rechte Seite. Mittagessen!</td></tr>
+  </table>
+
+  <div class="stopp">
+    <img src="assets/img/dampflokwerk.jpg" alt="Dampflokomotive im Dampflokwerk Meiningen">
+    <div class="stopp-info">
+      <h3>Dampflokwerk Meiningen</h3>
+      <p class="adresse">Am Flutgraben 2, 98617 Meiningen<br><span class="tel">Tel. 03693 851602</span></p>
+      <p class="klein">Führung 10:00–11:30 Uhr · 6&nbsp;€ pro Person, <strong>nur Barzahlung</strong> · festes Schuhwerk erforderlich · Treffpunkt an der Pforte</p>
+    </div>
+  </div>
+  <div class="stopp ohne-bild">
+    <div class="stopp-info">
+      <h3>Mittag: Gasthof Brückenmühle</h3>
+      <p class="adresse">Brückenmühle 2, 98617 Meiningen OT Walldorf<br><span class="tel">Tel. 03693 801004</span></p>
+      <p class="klein">Restaurant täglich 11–22 Uhr · Thüringer und italienische Küche (Mittagskarte u.&thinsp;a. Thüringer Rinderroulade, Schweinebraten mit Sauerkraut, gebratene Kloßscheiben) · Parkplatz für die Kolonne rechts</p>
+      <p class="klein">Speisekarte online: <a href="https://restaurant-brueckenmuehle.de/speisekarte/">restaurant-brueckenmuehle.de/speisekarte</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ETAPPE 2 ══════════ -->
+<section class="bogen e2" id="etappe2">
+  <div class="etappe-kopf">
+    <div class="startnummer" aria-hidden="true">2</div>
+    <div>
+      <h2><span class="sr">Etappe 2: </span>Meiningen &rarr; Berghaus Rhön</h2>
+      <div class="etappe-daten">
+        <span><b>86,3</b> km</span>
+        <span><b>2:30</b> h Konvoi</span>
+        <span>Start <b>13:30</b></span>
+        <span>Über die Wasserkuppe</span>
+      </div>
+    </div>
+  </div>
+  <figure class="karte-rahmen">
+    <img src="karten/e2.jpg" alt="Karte der Etappe 2 von Meiningen über die Wasserkuppe zum Berghaus Rhön">
+  </figure>
+  <table class="roadbook">
+    <tr><td class="nr">1</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Parkplatz nach rechts verlassen auf Brückenmühle, der Straße links folgen auf die Melkerser Hauptstraße</td></tr>
+    <tr><td class="nr">2</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Straße folgen Richtung Herpf</td></tr>
+    <tr><td class="nr">3</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">In Herpf Richtung Kaltensundheim fahren</td></tr>
+    <tr class="warnung"><td class="nr">4</td><td class="pikto"><svg><use href="#i-achtung"/></svg></td><td class="text">Durch Stepfershausen fahren<br><span class="hinweis">Vorsicht: Tempo 30 km/h!</span></td></tr>
+    <tr><td class="nr">5</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Durch Dörrensolz, danach Oberkatz, dann Aschenhausen – weiter nach Kaltensundheim</td></tr>
+    <tr><td class="nr">6</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Die B285 durch Kaltensundheim in Richtung Reichenhausen fahren</td></tr>
+    <tr><td class="nr">7</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">In Reichenhausen rechts auf die Frankenheimer Straße Richtung Frankenheim</td></tr>
+    <tr><td class="nr">8</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Durch Frankenheim fahren Richtung Birx</td></tr>
+    <tr><td class="nr">9</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Die Seifertser Straße durch Birx und aus Birx hinaus</td></tr>
+    <tr><td class="nr">10</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">An der Kreuzung rechts Richtung Seiferts, auf die Birxstraße</td></tr>
+    <tr><td class="nr">11</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">In Seiferts links auf die B278 Richtung Wasserkuppe</td></tr>
+    <tr><td class="nr">12</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Nach Wüstensachsen rechts auf die B284 Richtung Bischofsheim</td></tr>
+    <tr><td class="nr">13</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Rechts abbiegen Richtung Wasserkuppe</td></tr>
+    <tr class="warnung"><td class="nr">14</td><td class="pikto"><svg><use href="#i-gipfel"/></svg></td><td class="text">Über die Wasserkuppe fahren<br><span class="hinweis">Höchster Punkt der Tour: 950 m – Radom rechts, Segelflieger über uns</span></td></tr>
+    <tr><td class="nr">15</td><td class="pikto"><svg><use href="#i-kreisel"/></svg></td><td class="text">Am Kreisel geradeaus Richtung Abtsroda weiterfahren</td></tr>
+    <tr><td class="nr">16</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Bei Abtsroda links Richtung Gersfeld abbiegen</td></tr>
+    <tr><td class="nr">17</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Nächste Kreuzung links abbiegen Richtung Gersfeld</td></tr>
+    <tr><td class="nr">18</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">In Gersfeld links auf die B284 Wasserkuppenstraße</td></tr>
+    <tr class="warnung"><td class="nr">19</td><td class="pikto"><svg><use href="#i-ampel"/></svg></td><td class="text">Ampelkreuzung: <strong>links</strong> auf die B279 Peter-Seifert-Straße Richtung Bischofsheim<br><span class="hinweis">Fester Blitzer nach Gersfeld Richtung Schwedenschanze – Tempo 50!</span></td></tr>
+    <tr><td class="nr">20</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Einige Kilometer nach der Schwedenschanze rechts auf die St&nbsp;2289 Richtung Wildflecken</td></tr>
+    <tr class="warnung"><td class="nr">21</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Vor Riedenberg links von der Hauptstraße Richtung Berghaus Rhön<br><span class="hinweis">Kleine Einfahrt – leicht zu übersehen, langsam!</span></td></tr>
+    <tr><td class="nr">22</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Gleich wieder rechts Richtung Berghaus Rhön</td></tr>
+    <tr class="ziel-zeile"><td class="nr">23</td><td class="pikto"><svg><use href="#i-ziel"/></svg></td><td class="text">Bis zum <strong>Berghaus Rhön</strong> weiterfahren und dort parken – Kaffee &amp; Kuchen!</td></tr>
+  </table>
+
+  <div class="stopp ohne-bild">
+    <div class="stopp-info">
+      <h3>Kaffee: Berghaus Rhön</h3>
+      <p class="adresse">Bergseestraße 99, 97792 Riedenberg<br><span class="tel">Tel. 09749 9307721</span></p>
+      <p class="klein">Samstags 10–22 Uhr geöffnet · Einkehr mit Aussicht in den „schwarzen Bergen" · Tischreservierung nur telefonisch</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ETAPPE 3 ══════════ -->
+<section class="bogen e3" id="etappe3">
+  <div class="etappe-kopf">
+    <div class="startnummer" aria-hidden="true">3</div>
+    <div>
+      <h2><span class="sr">Etappe 3: </span>Berghaus Rhön &rarr; Bad Kissingen</h2>
+      <div class="etappe-daten">
+        <span><b>25,5</b> km</span>
+        <span><b>0:45</b> h Konvoi</span>
+        <span>Start <b>17:00</b></span>
+        <span>Ziel: Hotel Bayerischer Hof</span>
+      </div>
+    </div>
+  </div>
+  <figure class="karte-rahmen">
+    <img src="karten/e3.jpg" alt="Karte der Etappe 3 vom Berghaus Rhön zurück nach Bad Kissingen">
+  </figure>
+  <table class="roadbook">
+    <tr><td class="nr">1</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Die Straße beim Berghaus Rhön weiterfahren bis Schildeck</td></tr>
+    <tr><td class="nr">2</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Auf die B286 nach links abbiegen Richtung Bad Kissingen</td></tr>
+    <tr><td class="nr">3</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Nach Poppenroth links abbiegen Richtung Klaushof</td></tr>
+    <tr><td class="nr">4</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Am Klaushof vorbei Richtung Bad Kissingen</td></tr>
+    <tr><td class="nr">5</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Nach der Nordbrücke rechts abbiegen Richtung Stadtmitte</td></tr>
+    <tr class="warnung"><td class="nr">6</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Am nächsten Abzweig links in die Salinenstraße<br><span class="hinweis">Wird zur Tempo-30-Zone!</span></td></tr>
+    <tr><td class="nr">7</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">An der Kreuzung nach rechts in die Maxstraße</td></tr>
+    <tr class="ziel-zeile"><td class="nr">8</td><td class="pikto"><svg><use href="#i-ziel"/></svg></td><td class="text"><strong>ENDE:</strong> Am Hotel rechts auf den Parkplatz – willkommen zurück in Bad Kissingen!</td></tr>
+  </table>
+</section>
+
+<!-- ══════════ SEHENSWÜRDIGKEITEN ══════════ -->
+<section class="bogen vorlesen" id="vorlesen">
+  <h2>Unterwegs – zum Vorlesen für den Beifahrer</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <article>
+    <div class="wappen-zeile">
+      <img src="assets/img/wappen-bad-kissingen.png" alt="Wappen von Bad Kissingen">
+      <h3>Bad Kissingen</h3>
+    </div>
+    <figure>
+      <img src="assets/img/bad-kissingen.jpg" alt="Regentenbau in Bad Kissingen bei Nacht, Blick über die Fränkische Saale">
+      <figcaption>Foto: Holger Uwe Schmitt, Der Regentenbau in Bad Kissingen, CC BY-SA 4.0</figcaption>
+    </figure>
+    <p>Unser Start- und Zielort gehört seit 2021 zum UNESCO-Welterbe „Bedeutende Kurstädte Europas". Im 19. Jahrhundert kurte hier halb Europa: Kaiserin Sisi, Zar Alexander II. und Otto von Bismarck, der Bad Kissingen fünfzehn Mal besuchte. Der Regentenbau und die Wandelhalle zählen zu den prächtigsten Kurbauten des Kontinents.</p>
+  </article>
+
+  <article>
+    <h3>Dampflokwerk Meiningen</h3>
+    <figure>
+      <img src="assets/img/dampflokwerk.jpg" alt="Dampflok 03 1010 unter Dampf bei den Meininger Dampfloktagen">
+      <figcaption id="credit-dampflokwerk">Dampflok 03 1010 bei den Meininger Dampfloktagen – Foto: Urmelbeauftragter, CC BY-SA 3.0</figcaption>
+    </figure>
+    <p>Seit 1914 werden in Meiningen Dampflokomotiven ausgebessert – heute ist es das letzte Werk der Deutschen Bahn, das Dampfloks komplett hauptuntersuchen, reparieren und sogar neu bauen kann. Museumsbahnen aus ganz Europa schicken ihre Maschinen hierher. In der Lokhalle stehen die Kessel, Radsätze und Gestänge, die anderswo längst Museumsstücke wären, noch in der laufenden Produktion.</p>
+  </article>
+
+  <article>
+    <div class="wappen-zeile">
+      <img src="assets/img/wappen-meiningen.png" alt="Wappen von Meiningen">
+      <h3>Meiningen &amp; das Meininger Theater</h3>
+    </div>
+    <p>Die Werra-Stadt war im 19. Jahrhundert eine Theatermacht: Herzog Georg II., der „Theaterherzog", revolutionierte mit seiner Truppe die Schauspielkunst – historisch genaue Kostüme, Ensemblespiel statt Stardenkerei. Die „Meininger" gastierten in ganz Europa und prägten das moderne Regietheater. Wir fahren auf beiden Stadtdurchfahrten direkt am klassizistischen Theaterbau vorbei.</p>
+  </article>
+
+  <article>
+    <h3>Die Hohe Rhön</h3>
+    <figure>
+      <img src="assets/img/rhoen.jpg" alt="Offene Hochfläche der Langen Rhön">
+      <figcaption id="credit-rhoen">Foto: Ursula Jaeger, Landschaft im NSG Lange Rhön, CC BY-SA 4.0</figcaption>
+    </figure>
+    <p>Das „Land der offenen Fernen": ein UNESCO-Biosphärenreservat über drei Bundesländer. Die baumarmen Hochflächen der Langen Rhön sind kein Urzustand, sondern Jahrhunderte alte Kulturlandschaft – von Schafherden offen gehalten. Auf Etappe 2 wechseln wir mehrfach zwischen Thüringen, Hessen und Bayern; in Dörfern wie Birx verlief bis 1989 die innerdeutsche Grenze keine zwei Kilometer entfernt.</p>
+  </article>
+
+  <article>
+    <h3>Wasserkuppe</h3>
+    <figure>
+      <img src="assets/img/wasserkuppe.jpg" alt="Radom auf der Wasserkuppe bei Sonnenuntergang">
+      <figcaption id="credit-wasserkuppe">Foto: Tilman2007, Wasserkuppe, Radom, bei Sonnenuntergang, CC BY-SA 4.0</figcaption>
+    </figure>
+    <p>Mit 950 Metern der höchste Berg Hessens – und die Wiege des Segelflugs. Ab 1911 ließen sich hier die ersten Flugschüler von den Hängen tragen; bis heute starten an guten Tagen ganze Ketten von Segelflugzeugen. Die weiße Kugel auf dem Gipfel, das Radom, war im Kalten Krieg eine amerikanische Radarstation und ist heute das Wahrzeichen der Rhön. Wir fahren direkt über den Berg.</p>
+  </article>
+
+  <article>
+    <h3>Schwedenschanze &amp; die schwarzen Berge</h3>
+    <p>Der Name der Passhöhe an der B279 erinnert an Verschanzungen aus dem Dreißigjährigen Krieg. Dahinter beginnen die „schwarzen Berge", der dunkel bewaldete Südwestrand der Rhön – dort liegt unser Kaffeestopp, das Berghaus Rhön oberhalb von Riedenberg.</p>
+  </article>
+</section>
+
+<!-- ══════════ KONVOI-REGELN ══════════ -->
+<section class="bogen" id="konvoi">
+  <h2>Konvoi-Regeln</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <ol class="regeln">
+    <li><strong>Der Vordermann ist dein Kompass.</strong> Jeder orientiert sich am Fahrzeug vor sich – nicht am Spitzenfahrzeug. Den Hintermann im Spiegel behalten.</li>
+    <li><strong>Niemand geht verloren.</strong> Wer den Anschluss verliert: kein Stress, keine Rennmanöver. An unklaren Abzweigen wartet das vorausfahrende Fahrzeug sichtbar.</li>
+    <li><strong>Ampeln reißen den Konvoi.</strong> Wer es bei Gelb nicht mehr schafft, hält an. Die Gruppe vor der Ampel fährt langsam weiter, bis alle wieder aufgeschlossen haben.</li>
+    <li><strong>Lücken lassen.</strong> Ortsdurchfahrten und Landstraße: genug Abstand zum Überholen für Dritte. Wir sind ein Ausflug, kein Straßensperrwerk.</li>
+    <li><strong>Tempo-Disziplin.</strong> Tempo 30 in Stepfershausen und der Salinenstraße ernst nehmen – die Anwohner sollen uns in guter Erinnerung behalten. Zwei feste Blitzer sind im Roadbook markiert (Ortseinfahrt Meiningen, B279 bei Gersfeld).</li>
+    <li><strong>Der Besenwagen fährt zuletzt.</strong> Das Schlussfahrzeug hat Werkzeug, Abschleppseil und Überbrückungskabel an Bord. Niemand bleibt allein am Straßenrand.</li>
+    <li><strong>Panne?</strong> Warnblinker an, raus aus der Fahrbahn, Warnweste an, Orga anrufen. Der Konvoi fährt weiter – der Besenwagen hält bei dir.</li>
+    <li><strong>Tanken.</strong> Vollgetankt zum Start erscheinen. Die Strecke hat wenige Tankstellen – Reserve im Blick behalten.</li>
+  </ol>
+
+  <div class="stopp ohne-bild" style="margin-top:26px" id="tourleitung-karte">
+    <div class="stopp-info">
+      <h3>Eure Tourleitung: Markus Renner</h3>
+      <p class="klein">Plant und führt diese Ausfahrt. Bei Fragen vor dem Start oder unterwegs: ansprechen oder anrufen – Nummer im Notfallkasten unten.</p>
+    </div>
+  </div>
+
+  <div class="notfall">
+    <h3>Notfall &amp; Kontakte</h3>
+    <table>
+      <tr><td>Tourleitung</td><td>Markus Renner · <span class="platzhalter">Mobilnummer eintragen</span></td></tr>
+      <tr><td>Besenwagen</td><td><span class="platzhalter">Name + Mobilnummer eintragen</span></td></tr>
+      <tr><td>Notruf</td><td>112 (Rettung) · 110 (Polizei)</td></tr>
+      <tr><td>Pannenhilfe</td><td>ADAC 089 20 20 4000</td></tr>
+      <tr><td>Dampflokwerk</td><td>03693 851602</td></tr>
+      <tr><td>Brückenmühle</td><td>03693 801004</td></tr>
+      <tr><td>Berghaus Rhön</td><td>09749 9307721</td></tr>
+    </table>
+  </div>
+
+  <h3>Checkliste für die Tourleitung (vorab)</h3>
+  <ul class="checkliste">
+    <li>Dampflokwerk: <strong>Gruppenanmeldung</strong> (ab 6 Personen Pflicht) – 03693 851602 / mail@dampflokwerk.de</li>
+    <li>Brückenmühle: Tische + Kolonnen-Parkplatz reservieren – 03693 801004</li>
+    <li>Berghaus Rhön: Kaffeetafel reservieren (nur telefonisch) – 09749 9307721</li>
+    <li>Besenwagen benennen, Werkzeug/Abschleppseil/Starthilfe einladen</li>
+    <li>Teilnehmerliste ausfüllen, Handynummern einsammeln (WhatsApp-Gruppe)</li>
+    <li>Alle erinnern: Bargeld für die Werksführung (6&nbsp;€ p.&thinsp;P.), festes Schuhwerk</li>
+    <li>Strecke in der Woche vorher auf Baustellen prüfen</li>
+  </ul>
+</section>
+
+<!-- ══════════ TEILNEHMER ══════════ -->
+<section class="bogen" id="teilnehmer">
+  <h2>Teilnehmer &amp; Fahrzeuge</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <p class="klein">Startreihenfolge = Listenreihenfolge. Wird beim Briefing festgelegt.</p>
+  <table class="teilnehmer">
+    <thead>
+      <tr><th></th><th>Fahrer / Beifahrer</th><th>Fahrzeug</th><th>Baujahr</th><th>Farbe</th><th>Mobil</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lfd">1</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">2</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">3</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">4</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">5</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">6</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">7</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">8</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">9</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">10</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">11</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">12</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">13</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">14</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="lfd">15</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══════════ QUIZ + BINGO ══════════ -->
+<section class="bogen" id="spass">
+  <h2>Für unterwegs</h2>
+  <div class="m-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <h3>Das Strecken-Quiz</h3>
+  <p class="klein">Für Beifahrer mit Ehrgeiz – Auflösung unten (Heft drehen).</p>
+  <ol class="quiz">
+    <li>Seit wann werden in Meiningen Dampflokomotiven ausgebessert?</li>
+    <li>Wie heißt der Herzog, der das Meininger Theater weltberühmt machte?</li>
+    <li>Wie hoch ist die Wasserkuppe?</li>
+    <li>Was war das Radom auf der Wasserkuppe im Kalten Krieg?</li>
+    <li>Welcher Sport wurde auf der Wasserkuppe erfunden?</li>
+    <li>Durch wie viele Bundesländer führt unsere Tour?</li>
+    <li>An welchen Krieg erinnert der Name „Schwedenschanze"?</li>
+    <li>Welcher berühmte Kurgast besuchte Bad Kissingen fünfzehn Mal?</li>
+  </ol>
+  <div class="aufloesung">
+    <p>Auflösung: 1) Seit 1914 &nbsp;2) Georg II., der „Theaterherzog" &nbsp;3) 950 Meter &nbsp;4) Eine amerikanische Radarstation &nbsp;5) Der Segelflug &nbsp;6) Drei – Bayern, Thüringen, Hessen &nbsp;7) An den Dreißigjährigen Krieg &nbsp;8) Otto von Bismarck</p>
+  </div>
+
+  <div class="bingo-block">
+  <h3>Ausfahrt-Bingo</h3>
+  <p class="klein">Wer zuerst eine Reihe voll hat, ruft es beim nächsten Stopp in die Runde. Der Gewinn: Ruhm.</p>
+  <div class="bingo">
+    <div>Segelflieger am Himmel</div>
+    <div>Schafherde</div>
+    <div>Traktor im Konvoi</div>
+    <div>Winkendes Kind</div>
+    <div>Dampflok unter Dampf</div>
+    <div>Daumen hoch von Passanten</div>
+    <div>Radom gesichtet</div>
+    <div>Foto-Stopp-Wunsch</div>
+    <div>Grenzschild Bundesland</div>
+    <div class="frei">Frei</div>
+    <div>Kuh auf der Weide</div>
+    <div>Motorradgruppe grüßt</div>
+    <div>Jemand verfährt sich</div>
+    <div>Handy-Foto vom Konvoi</div>
+    <div>Zwiebelturm-Kirche</div>
+    <div>„Schönes Auto!" gehört</div>
+  </div>
+  </div>
+</section>
+
+<!-- ══════════ RÜCKSEITE ══════════ -->
+<footer class="bogen rueck">
+  <h2>Gute Fahrt!</h2>
+  <div class="m-band" aria-hidden="true" style="justify-content:center"><span></span><span></span><span></span><span></span></div>
+  <p>Dieses Roadbook gibt es auch fürs Handy – mit interaktiver Karte und GPX-Datei für dein Navi:</p>
+  <div class="qr-box" id="qr-box" style="border:none"><img src="assets/img/qr-roadbook.svg" alt="QR-Code zum Online-Roadbook"></div>
+  <p class="klein" id="web-adresse">hcset.github.io/bmw6er-ausfahrt</p>
+  <div class="lizenzen" id="lizenzen">
+    <p><strong>Karten:</strong> © OpenStreetMap-Mitwirkende (openstreetmap.org/copyright), Routing: OSRM.</p>
+    <p id="foto-lizenzen"><strong>Fotos</strong> (Wikimedia Commons): Ermell, „BMW 635 CSi (E24)", CC BY-SA 4.0 · Urmelbeauftragter, „03 1010 Meiningen", CC BY-SA 3.0 · Tilman2007, „Wasserkuppe, Radom, bei Sonnenuntergang", CC BY-SA 4.0 · Andreas Praefcke, „Meiningen Bernhardstraße Theater", CC BY 3.0 · Holger Uwe Schmitt, „Der Regentenbau in Bad Kissingen", CC BY-SA 4.0 · Ursula Jaeger, „Landschaft im NSG Lange Rhön", CC BY-SA 4.0. Wappen Bad Kissingen und Meiningen: gemeinfrei. Lizenztexte: creativecommons.org/licenses.</p>
+    <p>Roadbook erstellt im September 2026. Alle Zeitangaben sind Planwerte ohne Gewähr; Ampeln, Baustellen und Bratwurstpausen behalten das letzte Wort.</p>
+  </div>
+</footer>
+
+<div id="version-badge" role="status"></div>
+<script>
+(function () {
+  var badge = document.getElementById("version-badge");
+  var v = document.querySelector('meta[name="version"]').content;
+  var d = document.querySelector('meta[name="version-date"]').content;
+  badge.textContent = "Version " + v + " · " + d;
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "v" || e.key === "V") {
+      if (/^(input|textarea)$/i.test(document.activeElement.tagName)) return;
+      badge.classList.toggle("sichtbar");
+    }
+  });
+})();
+</script>
+</body>
+</html>

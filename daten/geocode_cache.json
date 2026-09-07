@@ -1,0 +1,212 @@
+{
+ "Hotel Bayerischer Hof, Bad Kissingen": {
+  "q": "Hotel Bayerischer Hof, Bad Kissingen",
+  "lat": 50.2011282,
+  "lon": 10.0739832,
+  "name": "Hotel Bayerischer Hof, 11, Maxstraße, Garitz, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland"
+ },
+ "Flugplatz, Bad Kissingen": {
+  "q": "Flugplatz, Bad Kissingen",
+  "lat": 50.2100888,
+  "lon": 10.0693764,
+  "name": "Flugplatz Bad Kissingen, Am Hegholz, Garitz, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland"
+ },
+ "Klaushofstraße, Bad Kissingen": {
+  "q": "Klaushofstraße, Bad Kissingen",
+  "lat": 50.2236799,
+  "lon": 10.0433029,
+  "name": "Klaushofstraße, Hausen, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland"
+ },
+ "Nüdlingen": {
+  "q": "Nüdlingen",
+  "lat": 50.2198226,
+  "lon": 10.1202633,
+  "name": "Nüdlingen, Landkreis Bad Kissingen, Bayern, 97720, Deutschland"
+ },
+ "Münnerstadt": {
+  "q": "Münnerstadt",
+  "lat": 50.2549715,
+  "lon": 10.2210984,
+  "name": "Münnerstadt, Landkreis Bad Kissingen, Bayern, 97702, Deutschland"
+ },
+ "Bad Neustadt an der Saale": {
+  "q": "Bad Neustadt an der Saale",
+  "lat": 50.3343586,
+  "lon": 10.2232004,
+  "name": "Bad Neustadt an der Saale, Landkreis Rhön-Grabfeld, Bayern, Deutschland"
+ },
+ "Mellrichstadt": {
+  "q": "Mellrichstadt",
+  "lat": 50.4460338,
+  "lon": 10.3292315,
+  "name": "Mellrichstadt, Mellrichstadt (VGem), Landkreis Rhön-Grabfeld, Bayern, 97638, Deutschland"
+ },
+ "Henneberg, Thüringen": {
+  "q": "Henneberg, Thüringen",
+  "lat": 50.4926067,
+  "lon": 10.3552002,
+  "name": "Henneberg, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Dampflokwerk, Meiningen": {
+  "q": "Dampflokwerk, Meiningen",
+  "lat": 50.5794851,
+  "lon": 10.4208164,
+  "name": "Dampflokwerk, Meiningen, Nord, Kernstadt Meiningen, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Landsberger Straße, Meiningen": {
+  "q": "Landsberger Straße, Meiningen",
+  "lat": 50.5951652,
+  "lon": 10.396953,
+  "name": "Landsberger Straße, Meiningen, Welkershausen, Kernstadt Meiningen, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, 98617, Deutschland"
+ },
+ "Brückenmühle, Meiningen": {
+  "q": "Brückenmühle, Meiningen",
+  "lat": 50.6035065,
+  "lon": 10.3788523,
+  "name": "Brückenmühle, Walldorf, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, 98617, Deutschland"
+ },
+ "Herpf, Meiningen": {
+  "q": "Herpf, Meiningen",
+  "lat": 50.5573802,
+  "lon": 10.2955735,
+  "name": "Herpf, Rhönblick, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Stepfershausen": {
+  "q": "Stepfershausen",
+  "lat": 50.5969089,
+  "lon": 10.3006247,
+  "name": "Stepfershausen, Träbes, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, 98617, Deutschland"
+ },
+ "Dörrensolz": {
+  "q": "Dörrensolz",
+  "lat": 50.6063848,
+  "lon": 10.2542651,
+  "name": "Dörrensolz, Unterkatz, Wasungen, Wasungen-Amt Sand, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Oberkatz": {
+  "q": "Oberkatz",
+  "lat": 50.6047119,
+  "lon": 10.2244644,
+  "name": "Oberkatz, Kaltennordheim, Hohe Rhön, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Aschenhausen": {
+  "q": "Aschenhausen",
+  "lat": 50.5984081,
+  "lon": 10.2027389,
+  "name": "Aschenhausen, Kaltennordheim, Hohe Rhön, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Kaltensundheim": {
+  "q": "Kaltensundheim",
+  "lat": 50.6066299,
+  "lon": 10.1597182,
+  "name": "Kaltensundheim, Kaltennordheim, Hohe Rhön, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Reichenhausen, Thüringen": {
+  "q": "Reichenhausen, Thüringen",
+  "lat": 50.582391,
+  "lon": 10.1310317,
+  "name": "Reichenhausen, Erbenhausen, Hohe Rhön, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Frankenheim/Rhön": {
+  "q": "Frankenheim/Rhön",
+  "lat": 50.5444128,
+  "lon": 10.0653295,
+  "name": "Frankenheim/Rhön, Hohe Rhön, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Birx": {
+  "q": "Birx",
+  "lat": 50.5293982,
+  "lon": 10.0470005,
+  "name": "Birx, Hohe Rhön, Landkreis Schmalkalden-Meiningen, Thüringen, Deutschland"
+ },
+ "Seiferts, Ehrenberg": {
+  "q": "Seiferts, Ehrenberg",
+  "lat": 50.526106,
+  "lon": 10.0153864,
+  "name": "Seiferts, Ehrenberg (Rhön), Landkreis Fulda, Hessen, Deutschland"
+ },
+ "Wüstensachsen, Ehrenberg": {
+  "q": "Wüstensachsen, Ehrenberg",
+  "lat": 50.4994621,
+  "lon": 10.0025598,
+  "name": "Wüstensachsen, Ehrenberg (Rhön), Landkreis Fulda, Hessen, Deutschland"
+ },
+ "Wasserkuppe, Gersfeld": {
+  "q": "Wasserkuppe, Gersfeld",
+  "lat": 50.497647,
+  "lon": 9.9362893,
+  "name": "Wasserkuppe, Obernhausen, Gersfeld (Rhön), Landkreis Fulda, Hessen, 36129, Deutschland"
+ },
+ "Abtsroda, Poppenhausen": {
+  "q": "Abtsroda, Poppenhausen",
+  "lat": 50.5082902,
+  "lon": 9.9242071,
+  "name": "Abtsroda, Poppenhausen (Wasserkuppe), Landkreis Fulda, Hessen, 36163, Deutschland"
+ },
+ "Gersfeld": {
+  "q": "Gersfeld",
+  "lat": 50.4497667,
+  "lon": 9.8943709,
+  "name": "Gersfeld (Rhön), Landkreis Fulda, Hessen, 36129, Deutschland"
+ },
+ "Schwedenschanze, Rhön": {
+  "q": "Schwedenschanze, Rhön",
+  "lat": 50.4206962,
+  "lon": 9.9346823,
+  "name": "Schwedenschanze, B 279, Sparbrod, Rodenbach, Gersfeld (Rhön), Landkreis Fulda, Hessen, 36129, Deutschland"
+ },
+ "Riedenberg": {
+  "q": "Riedenberg",
+  "lat": 50.3216442,
+  "lon": 9.8839,
+  "name": "Riedenberg, Bad Brückenau (VGem), Landkreis Bad Kissingen, Bayern, 97792, Deutschland"
+ },
+ "Berghaus Rhön, Riedenberg": {
+  "q": "Berghaus Rhön, Riedenberg",
+  "lat": 50.3133647,
+  "lon": 9.886412,
+  "name": "Berghaus Rhön, 99, Julius-Kardinal-Doepfner-Weg, Riedenberg, Bad Brückenau (VGem), Landkreis Bad Kissingen, Bayern, 97792, Deutschland"
+ },
+ "Schildeck, Bad Brückenau": {
+  "q": "Schildeck, Bad Brückenau",
+  "lat": 50.2891009,
+  "lon": 9.8655971,
+  "name": "Schildeck, Schondra, Bad Brückenau (VGem), Landkreis Bad Kissingen, Bayern, 97795, Deutschland"
+ },
+ "Poppenroth, Bad Kissingen": {
+  "q": "Poppenroth, Bad Kissingen",
+  "lat": 50.2297536,
+  "lon": 9.9930818,
+  "name": "Poppenroth, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland"
+ },
+ "Klaushof, Bad Kissingen": {
+  "q": "Klaushof, Bad Kissingen",
+  "lat": 50.226642,
+  "lon": 10.0370833,
+  "name": "Klaushof, 102, Klaushofstraße, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland"
+ },
+ "Untere Saline, Bad Kissingen": {
+  "q": "Untere Saline, Bad Kissingen",
+  "lat": 50.2181893,
+  "lon": 10.0714081,
+  "name": "Untere Saline, Hausen, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland"
+ },
+ "Heustreu": {
+  "q": "Heustreu",
+  "lat": 50.351865,
+  "lon": 10.2507176,
+  "name": "Heustreu, Heustreu (VGem), Landkreis Rhön-Grabfeld, Bayern, Deutschland"
+ },
+ "Oberstreu": {
+  "q": "Oberstreu",
+  "lat": 50.3979996,
+  "lon": 10.2747291,
+  "name": "Oberstreu, Mellrichstadt (VGem), Landkreis Rhön-Grabfeld, Bayern, 97640, Deutschland"
+ },
+ "Obernhausen, Gersfeld": {
+  "q": "Obernhausen, Gersfeld",
+  "lat": 50.4802685,
+  "lon": 9.9443789,
+  "name": "Obernhausen, Gersfeld (Rhön), Landkreis Fulda, Hessen, Deutschland"
+ }
+}

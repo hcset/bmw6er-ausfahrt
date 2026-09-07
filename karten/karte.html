@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streckenkarte BMW 6er Ausfahrt</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; }
+  #map { height: 100%; }
+  .etappen-label {
+    background: #fff; border: 2px solid #333; border-radius: 4px;
+    padding: 2px 6px; font: bold 13px/1.2 -apple-system, sans-serif;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+// ?etappe=1|2|3 zeigt nur eine Etappe, ohne Parameter Gesamtstrecke
+const params = new URLSearchParams(location.search);
+const nur = params.get('etappe');
+
+const farben = { "1": "#b4441c", "2": "#6f4520", "3": "#c8a25e" }; // 70er: Rotton, Braun, Beige
+const stopps = [
+  { lat: 50.2011, lon: 10.0740, name: "Start/Ziel: Hotel Bayerischer Hof", etappen: ["1", "3"] },
+  { lat: 50.5795, lon: 10.4208, name: "Dampflokwerk Meiningen", etappen: ["1"] },
+  { lat: 50.6035, lon: 10.3789, name: "Mittag: Brückenmühle", etappen: ["1", "2"] },
+  { lat: 50.4976, lon: 9.9363,  name: "Wasserkuppe", etappen: ["2"] },
+  { lat: 50.3134, lon: 9.8864,  name: "Kaffee: Berghaus Rhön", etappen: ["2", "3"] },
+];
+
+const statisch = params.has('static');
+const map = L.map('map', { zoomSnap: 0.25, zoomControl: !statisch });
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap-Mitwirkende'
+}).addTo(map);
+
+fetch('../daten/route.json')
+  .then(r => r.json())
+  .then(daten => {
+    const gruppe = L.featureGroup();
+    for (const [etappe, info] of Object.entries(daten)) {
+      if (nur && etappe !== nur) continue;
+      // Weiße Kontur unter der Farblinie – hält auch Beige auf grünem Grund lesbar
+      gruppe.addLayer(L.geoJSON(info.geometry, {
+        style: { color: "#ffffff", weight: 9, opacity: 0.9 }
+      }));
+      gruppe.addLayer(L.geoJSON(info.geometry, {
+        style: { color: farben[etappe], weight: 5, opacity: 1 }
+      }));
+    }
+    for (const s of stopps) {
+      if (nur && !s.etappen.includes(nur)) continue;
+      gruppe.addLayer(L.marker([s.lat, s.lon]).bindTooltip(s.name, {
+        permanent: true, direction: 'right', className: 'etappen-label'
+      }));
+    }
+    gruppe.addTo(map);
+    map.fitBounds(gruppe.getBounds().pad(0.06));
+    // Signal fuer Screenshot-Automation
+    map.whenReady(() => setTimeout(() => { document.title = 'KARTE_FERTIG'; }, 2500));
+  });
+</script>
+</body>
+</html>
