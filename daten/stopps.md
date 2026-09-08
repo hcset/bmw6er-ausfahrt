@@ -1,7 +1,23 @@
-# Stopps + Ablaufplan — Recherchestand 07.09.2026
+# Stopps + Ablaufplan — Stand 08.09.2026 (nach Freigabe Marcus)
 
 ## Termin
-Samstag, 03.10.2026 (Tag der Deutschen Einheit). Sonnenuntergang Bad Kissingen ≈ 18:55.
+Samstag, 03.10.2026 (Tag der Deutschen Einheit).
+
+## Ablaufplan (freigegebene Zeiten)
+
+| Zeit  | Programmpunkt |
+|-------|---------------|
+| 08:30 | Fahrerbriefing Hotel Bayerischer Hof (Allgemeines zu Strecke und Tagesablauf, Roadbook-Ausgabe) |
+| 09:00 | Start Etappe 1 (70,6 km, ca. 1 h 15) |
+| 10:15 | Ankunft Parkplatz Dampflok Erlebniswelt, Sammeln an der Pforte des Dampflokwerks |
+| 10:30 | Werksführung Dampflokwerk, in zwei Gruppen |
+| 12:00 | Besuch Dampflok Erlebniswelt (direkt nebenan) |
+| 12:45 | Abfahrt zur Brückenmühle |
+| 13:00 | Mittagessen Gasthof Brückenmühle |
+| 14:00 | Start Etappe 2 (89,2 km, ca. 1 h 30, über die Wasserkuppe) |
+| 15:30 | Kaffee & Kuchen Berghaus Rhön |
+| 16:15 | Start Etappe 3 (25,5 km, ca. 30 min) |
+| 16:45 | Ankunft Hotel Bayerischer Hof |
 
 ## Stopps
 
@@ -9,44 +25,34 @@ Samstag, 03.10.2026 (Tag der Deutschen Einheit). Sonnenuntergang Bad Kissingen �
 Maxstraße 9, 97688 Bad Kissingen · Tel. 0971 80450
 
 ### Dampflokwerk Meiningen (DB Fahrzeuginstandhaltung)
-Am Flutgraben 2, 98617 Meiningen · Tel. 03693 851602 · mail@dampflokwerk.de
-- Führungen April–Oktober: JEDEN SAMSTAG 10:00 Uhr, ausschließlich samstags 10 Uhr
-- Dauer ca. 90 min, 6 €/Person, NUR BARZAHLUNG, festes Schuhwerk
-- Gruppen ab ca. 6 Personen: schriftliche Anmeldung erforderlich (DB-Kontaktformular / mail@dampflokwerk.de)
-- Zu sehen: Lokhalle, Anheizhaus, Kesselschmiede
-- ORGA-PFLICHT: Gruppenanmeldung vorab! Treffpunkt Pforte.
+Am Flutgraben 2, 98617 Meiningen · Tel. 03693 851602
+- Werksführung 10:30 Uhr, zwei Gruppen (von Marcus organisiert)
+- Festes Schuhwerk; KEINE Hunde bei der Führung
+- Treffpunkt Pforte
 
-### Mittag: Hotel & Restaurant Brückenmühle
+### Dampflok Erlebniswelt Meiningen
+Am Flutgraben 2a, 98617 Meiningen · Tel. 03693 8800780
+- Ausstellung direkt neben dem Werk; Besuch nach der Werksführung
+- Di–So 10–18 Uhr (Apr–Okt)
+
+### Mittag: Gasthof Brückenmühle
 Brückenmühle 2, 98617 Meiningen OT Walldorf · Tel. 03693 801004
-- Restaurant täglich 11–22 Uhr, Thüringer + italienische Küche
-- ORGA: Kolonnen-Parkplatz + Tischreservierung telefonisch
+- Feste Gerichte für die Gruppe vereinbart
 
 ### Kaffee: Berghaus Rhön
-Bergseestraße 99, 97792 Riedenberg · Tel. 09749 9307721 (Bernhard Oßner)
-- Sa 10–22 Uhr geöffnet (Mo/Di Ruhetag), warme Küche 11–20 Uhr
-- Tischreservierung NUR telefonisch
-- ORGA: Reservierung für Gruppe + Parken
+Bergseestraße 99, 97792 Riedenberg · Tel. 09749 9307721
+- Sa 10–22 Uhr (Mo/Di Ruhetag)
 
-## Ablaufplan (Konvoi-Tempo = OSRM-Fahrzeit × ~1,35 + Puffer)
+## Tourleitung
+Marcus Renner · 0177 4594650
 
-| Zeit  | Programmpunkt |
-|-------|---------------|
-| 07:00 | Eintreffen Hotelparkplatz, Aufstellung, Fahrzeugcheck, Roadbook-Ausgabe |
-| 07:15 | Fahrerbriefing |
-| 07:30 | Start Etappe 1 (68,6 km, ca. 2 h 15 im Konvoi) |
-| 09:45 | Ankunft Dampflokwerk Meiningen, Parken |
-| 10:00 | Werksführung (90 min, 6 € bar, festes Schuhwerk) |
-| 11:45 | Abfahrt zur Brückenmühle (ca. 15 min Stadtfahrt) |
-| 12:00 | Mittagessen Brückenmühle |
-| 13:30 | Start Etappe 2 (86,3 km, ca. 2 h 30 im Konvoi, Rhön + Wasserkuppe) |
-| 16:00 | Ankunft Berghaus Rhön, Kaffee & Kuchen |
-| 17:00 | Start Etappe 3 (25,5 km, ca. 45 min) |
-| 17:45 | Ankunft Hotel Bayerischer Hof — Ausklang |
+## Streckenhinweise
+- E2, Abzweig Wasserkuppe: Baustelle, soll bis 02.10. aufgehoben sein — sonst entfällt die Wasserkuppe (direkt weiter nach Gersfeld)
+- 2 feste Blitzer (OSM): Ortseinfahrt Meiningen, B279 bei Gersfeld (je Tempo 50)
+- Keine Konvoi-Formulierungen im Handout (Vorgabe Marcus, Vermeidung Anmeldepflicht-Optik)
 
-Puffer: Sonnenuntergang 18:55 → über 1 h Reserve.
-
-## Etappen-Kennzahlen (aus route.json)
-- E1 Bad Kissingen → Meiningen: 68,6 km
-- E2 Meiningen → Berghaus Rhön (über Wasserkuppe): 86,3 km
+## Etappen-Kennzahlen (route.json, Stand 08.09.)
+- E1 Bad Kissingen → Dampflok Erlebniswelt (+ Brückenmühle): 70,6 km
+- E2 Meiningen → Berghaus Rhön: 89,2 km
 - E3 Berghaus Rhön → Bad Kissingen: 25,5 km
-- Gesamt: ~180 km
+- Gesamt: ~185 km

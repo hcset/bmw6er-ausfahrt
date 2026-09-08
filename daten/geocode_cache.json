@@ -208,5 +208,47 @@
   "lat": 50.4802685,
   "lon": 9.9443789,
   "name": "Obernhausen, Gersfeld (Rhön), Landkreis Fulda, Hessen, Deutschland"
+ },
+ "Meininger Straße, Münnerstadt": {
+  "q": "Meininger Straße, Münnerstadt",
+  "lat": 50.2613441,
+  "lon": 10.1954876,
+  "name": "Meininger Straße, Münnerstadt, Landkreis Bad Kissingen, Bayern, 97702, Deutschland"
+ },
+ "Bahnhof, Mellrichstadt": {
+  "q": "Bahnhof, Mellrichstadt",
+  "lat": 50.425627,
+  "lon": 10.3070109,
+  "name": "Bahnhofstraße, Mellrichstadt, Mellrichstadt (VGem), Landkreis Rhön-Grabfeld, Bayern, 97638, Deutschland"
+ },
+ "Dampflok Erlebniswelt, Meiningen": {
+  "q": "Dampflok Erlebniswelt, Meiningen",
+  "lat": 50.5818838,
+  "lon": 10.4208143,
+  "name": "Dampflok Erlebniswelt Meiningen, 2a, Am Flutgraben, Drachenberg-Süd, Meiningen, Nord, Kernstadt Meiningen, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, 98617, Deutschland"
+ },
+ "Melkers, Meiningen": {
+  "q": "Melkers, Meiningen",
+  "lat": 50.6006043,
+  "lon": 10.3723423,
+  "name": "Melkers, Rippershausen, Meiningen, Landkreis Schmalkalden-Meiningen, Thüringen, 98639, Deutschland"
+ },
+ "Direktweg Herpf-Stepfershausen": {
+  "q": "Direktweg Herpf-Stepfershausen",
+  "lat": 50.577,
+  "lon": 10.298,
+  "name": "manuell"
+ },
+ "Deutsches Segelflugmuseum, Gersfeld": {
+  "q": "Deutsches Segelflugmuseum, Gersfeld",
+  "lat": 50.4984312,
+  "lon": 9.945592,
+  "name": "Deutsches Segelflugmuseum mit Modellflug Wasserkuppe, 2, Wasserkuppe, Obernhausen, Gersfeld (Rhön), Landkreis Fulda, Hessen, 36129, Deutschland"
+ },
+ "Guckaisee": {
+  "q": "Guckaisee",
+  "lat": 50.4851331,
+  "lon": 9.9213427,
+  "name": "Guckaisee, Schwarzerden, Rodholz, Poppenhausen (Wasserkuppe), Landkreis Fulda, Hessen, Deutschland"
  }
 }

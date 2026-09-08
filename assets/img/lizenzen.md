@@ -66,3 +66,10 @@ des Handouts (Autor + Lizenz + Link pro Bild) erfüllt die Lizenzpflichten.
 - **Commons-Titel:** File:Wappen Meiningen.svg (500px-PNG-Render)
 - **Lizenz:** Public domain (amtliches Wappen)
 - **Quelle:** https://commons.wikimedia.org/wiki/File:Wappen_Meiningen.svg
+
+## erlebniswelt.jpg
+- **Commons-Titel:** File:Dampflok Erlebniswelt06W.JPG
+- **Autor:** Kramer96
+- **Lizenz:** CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+- **Quelle:** https://commons.wikimedia.org/wiki/File:Dampflok_Erlebniswelt06W.JPG
+- **Attribution:** „Kramer96, Dampflok Erlebniswelt, CC BY 3.0"
