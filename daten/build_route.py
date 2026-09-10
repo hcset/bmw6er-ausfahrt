@@ -31,8 +31,6 @@ ETAPPEN = {
     ],
     "2": [
         "Brückenmühle, Meiningen",
-        "Melkers, Meiningen",
-        "Herpf, Meiningen",
         "Stepfershausen",
         "Dörrensolz",
         "Oberkatz",
