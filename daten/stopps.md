@@ -8,7 +8,7 @@ Samstag, 03.10.2026 (Tag der Deutschen Einheit).
 | Zeit  | Programmpunkt |
 |-------|---------------|
 | 08:30 | Fahrerbriefing Hotel Bayerischer Hof (Allgemeines zu Strecke und Tagesablauf, Roadbook-Ausgabe) |
-| 09:00 | Start Etappe 1 (70,6 km, ca. 1 h 15) |
+| 09:00 | Start Etappe 1 (71,4 km, ca. 1 h 15) |
 | 10:15 | Ankunft Parkplatz Dampflok Erlebniswelt, Sammeln an der Pforte des Dampflokwerks |
 | 10:30 | Werksführung Dampflokwerk, in zwei Gruppen |
 | 12:00 | Besuch Dampflok Erlebniswelt (direkt nebenan) |
@@ -52,7 +52,7 @@ Marcus Renner · 0177 4594650
 - Keine Konvoi-Formulierungen im Handout (Vorgabe Marcus, Vermeidung Anmeldepflicht-Optik)
 
 ## Etappen-Kennzahlen (route.json, Stand 08.09.)
-- E1 Bad Kissingen → Dampflok Erlebniswelt (+ Brückenmühle): 70,6 km
+- E1 Bad Kissingen → Dampflok Erlebniswelt (+ Brückenmühle): 71,4 km
 - E2 Meiningen → Berghaus Rhön: 79,2 km
 - E3 Berghaus Rhön → Bad Kissingen: 25,5 km
-- Gesamt: ~175 km
+- Gesamt: ~176 km

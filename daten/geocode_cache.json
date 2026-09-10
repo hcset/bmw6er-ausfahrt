@@ -250,5 +250,17 @@
   "lat": 50.4851331,
   "lon": 9.9213427,
   "name": "Guckaisee, Schwarzerden, Rodholz, Poppenhausen (Wasserkuppe), Landkreis Fulda, Hessen, Deutschland"
+ },
+ "Robert-Koch-Straße, Meiningen": {
+  "q": "Robert-Koch-Straße, Meiningen",
+  "lat": 50.57578,
+  "lon": 10.42396,
+  "name": "Robert-Koch-Straße, Schafhof, Meiningen"
+ },
+ "Marienstraße, Meiningen": {
+  "q": "Marienstraße, Meiningen",
+  "lat": 50.57102,
+  "lon": 10.41641,
+  "name": "Marienstraße, Schafhof, Meiningen"
  }
 }

@@ -26,6 +26,8 @@ ETAPPEN = {
         "Oberstreu",
         "Bahnhof, Mellrichstadt",
         "Dampflok Erlebniswelt, Meiningen",
+        "Robert-Koch-Straße, Meiningen",
+        "Marienstraße, Meiningen",
         "Landsberger Straße, Meiningen",
         "Brückenmühle, Meiningen",
     ],
