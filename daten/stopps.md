@@ -14,7 +14,7 @@ Samstag, 03.10.2026 (Tag der Deutschen Einheit).
 | 12:00 | Besuch Dampflok Erlebniswelt (direkt nebenan) |
 | 12:45 | Abfahrt zur Brückenmühle |
 | 13:00 | Mittagessen Gasthof Brückenmühle |
-| 14:00 | Start Etappe 2 (89,2 km, ca. 1 h 30, über die Wasserkuppe) |
+| 14:00 | Start Etappe 2 (89,6 km, ca. 1 h 30, über die Wasserkuppe) |
 | 15:30 | Kaffee & Kuchen Berghaus Rhön |
 | 16:15 | Start Etappe 3 (25,5 km, ca. 30 min) |
 | 16:45 | Ankunft Hotel Bayerischer Hof |
@@ -53,6 +53,6 @@ Marcus Renner · 0177 4594650
 
 ## Etappen-Kennzahlen (route.json, Stand 08.09.)
 - E1 Bad Kissingen → Dampflok Erlebniswelt (+ Brückenmühle): 70,6 km
-- E2 Meiningen → Berghaus Rhön: 89,2 km
+- E2 Meiningen → Berghaus Rhön: 89,6 km
 - E3 Berghaus Rhön → Bad Kissingen: 25,5 km
 - Gesamt: ~185 km
