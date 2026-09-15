@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roadbook – BMW 6er Club Ausfahrt 03.10.2026</title>
 <meta name="description" content="Roadbook der BMW 6er Club Ausfahrt am 03.10.2026: Bad Kissingen – Meiningen – Rhön – Bad Kissingen, 3 Etappen, ca. 176 km.">
-<meta name="version" content="2.0.4">
+<meta name="version" content="2.1.0">
 <meta name="version-date" content="2026-09-15">
 <style>
 @font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -207,9 +207,16 @@ table.roadbook { width: 100%; border-collapse: collapse; margin: 6px 0 10px; }
 table.roadbook td { padding: 8px 8px 8px 0; border-bottom: 1px solid var(--linie); vertical-align: middle; }
 table.roadbook tr:last-child td { border-bottom: 2px solid var(--ink); }
 td.nr {
-  width: 44px; font-family: "DINish Condensed"; font-weight: 900; font-size: 1.3rem;
+  width: 64px; font-family: "DINish Condensed"; font-weight: 900; font-size: 1.3rem;
   font-variant-numeric: tabular-nums; color: var(--ink-2); text-align: right; padding-right: 12px;
 }
+td.nr .distanz {
+  display: block; margin-top: 1px; white-space: nowrap;
+  font-family: "DINish", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.66rem; line-height: 1.15; font-weight: 700; color: var(--blau);
+}
+.e2 td.nr .distanz { color: var(--rot); }
+.e3 td.nr .distanz { color: var(--gruen); }
 td.pikto { width: 52px; }
 td.pikto svg { display: block; width: 38px; height: 38px; }
 .e1 td.pikto { color: var(--blau); }
@@ -348,11 +355,14 @@ ol.quiz li::before {
   .cover-inhalt { padding: 16mm 10mm 6mm; }
   .cover-foto img { height: 62mm; }
   .etappe-kopf { margin-bottom: 12px; padding: 10px 0 8px; }
+  .e3 .etappe-daten { gap: 4px 12px; font-size: 0.86rem; }
+  .e3 .etappe-daten span:last-child { flex-basis: 100%; }
   .startnummer { width: 52px; height: 52px; font-size: 1.8rem; }
   h2 { font-size: 17pt; }
   td.text { font-size: 9.4pt; }
   td.pikto svg { width: 26px; height: 26px; }
   td.nr { font-size: 10.5pt; }
+  td.nr .distanz { font-size: 6.5pt; }
   table.roadbook td { padding: 4px 6px 4px 0; }
   tr, .stopp, .zeitplan li, ol.regeln li, .bingo, article, .notfall { break-inside: avoid; }
   .zeitplan li { padding: 4px 0; grid-template-columns: 62px 1fr; gap: 10px; }
@@ -506,6 +516,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
   <figure class="karte-rahmen">
     <img src="karten/e1.jpg" alt="Karte der Etappe 1 von Bad Kissingen nach Meiningen">
   </figure>
+  <p class="klein"><strong>Orientierung:</strong> Entfernung unter der Nummer jeweils bis zum nächsten Hinweis, ungefähr nach OpenStreetMap/OSRM.</p>
   <table class="roadbook">
     <tr><td class="nr">1</td><td class="pikto"><svg><use href="#i-start"/></svg></td><td class="text"><strong>START</strong> Hotel Bayerischer Hof – Ausfahrt Hotelparkplatz nach rechts in die Maxstraße</td></tr>
     <tr><td class="nr">2</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Straßenverlauf folgen in die Theresienstraße</td></tr>
@@ -595,6 +606,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
   <figure class="karte-rahmen">
     <img src="karten/e2.jpg" alt="Karte der Etappe 2 von Meiningen über die Wasserkuppe zum Berghaus Rhön">
   </figure>
+  <p class="klein"><strong>Orientierung:</strong> Entfernung unter der Nummer jeweils bis zum nächsten Hinweis, ungefähr nach OpenStreetMap/OSRM.</p>
   <table class="roadbook">
     <tr><td class="nr">1</td><td class="pikto"><svg><use href="#i-rechts"/></svg></td><td class="text">Parkplatz nach rechts verlassen auf Brückenmühle, der Straße links folgen auf die Melkerser Hauptstraße</td></tr>
     <tr><td class="nr">2</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Straße folgen Richtung Herpf</td></tr>
@@ -647,6 +659,7 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
   <figure class="karte-rahmen">
     <img src="karten/e3.jpg" alt="Karte der Etappe 3 vom Berghaus Rhön zurück nach Bad Kissingen">
   </figure>
+  <p class="klein"><strong>Orientierung:</strong> Entfernung unter der Nummer jeweils bis zum nächsten Hinweis, ungefähr nach OpenStreetMap/OSRM.</p>
   <table class="roadbook">
     <tr><td class="nr">1</td><td class="pikto"><svg><use href="#i-geradeaus"/></svg></td><td class="text">Die Straße beim Berghaus Rhön weiterfahren bis Schildeck</td></tr>
     <tr><td class="nr">2</td><td class="pikto"><svg><use href="#i-links"/></svg></td><td class="text">Auf die B286 nach links abbiegen Richtung Bad Kissingen</td></tr>
@@ -819,6 +832,46 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
 if (new URLSearchParams(location.search).has("sw")) {
   document.documentElement.classList.add("sw");
 }
+// Ungefähre Straßenentfernung bis zum nächsten nummerierten Hinweis.
+// Grundlage: gespeicherte OSM-Streckenlinie und OSRM-Abbiegeabschnitte;
+// je Etappe auf die freigegebene Gesamtdistanz abgeglichen.
+(function () {
+  var etappen = [
+    {
+      id: "etappe1", zielKm: 71.4, zwischenziel: 31,
+      km: [0.05,0.29,0.25,0.27,1.40,1.30,0.30,2.10,3.60,0.40,3.10,4.20,1.00,5.70,3.50,0.20,17.50,0.40,0.30,0.60,0.50,0.60,13.00,0.50,0.50,4.70,0.18,0.32,0.84,0.15,0,0.02,0.38,0.31,0.27,0.18,0.36,0.32,2.93,0]
+    },
+    {
+      id: "etappe2", zielKm: 79.2,
+      km: [0.02,4.66,3.08,3.43,6.24,3.64,7.36,2.25,2.86,1.50,5.08,3.70,1.10,3.20,0.04,2.90,0.29,4.48,3.72,13.10,1.84,0.33,0]
+    },
+    {
+      id: "etappe3", zielKm: 25.5,
+      km: [3.40,11.20,2.73,3.10,3.16,0.28,1.62,0]
+    }
+  ];
+  function formatDistanz(km) {
+    if (km < 1) return "ca. " + Math.max(10, Math.round(km * 100)) * 10 + " m";
+    return "ca. " + km.toFixed(1).replace(".", ",") + " km";
+  }
+  etappen.forEach(function (etappe) {
+    var zellen = document.querySelectorAll("#" + etappe.id + " table.roadbook td.nr");
+    var summe = etappe.km.reduce(function (sum, km) { return sum + km; }, 0);
+    var faktor = etappe.zielKm / summe;
+    zellen.forEach(function (zelle, index) {
+      var nummer = index + 1;
+      var text;
+      if (etappe.zwischenziel === nummer) text = "Zwischenziel";
+      else if (index === zellen.length - 1) text = "Ziel";
+      else text = formatDistanz(etappe.km[index] * faktor);
+      var distanz = document.createElement("span");
+      distanz.className = "distanz";
+      distanz.textContent = text;
+      if (text.indexOf("ca.") === 0) distanz.title = "Ungefähre Straßenentfernung bis zum nächsten Hinweis";
+      zelle.appendChild(distanz);
+    });
+  });
+})();
 (function () {
   var badge = document.getElementById("version-badge");
   var v = document.querySelector('meta[name="version"]').content;
