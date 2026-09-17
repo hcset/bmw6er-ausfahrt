@@ -73,3 +73,9 @@ des Handouts (Autor + Lizenz + Link pro Bild) erfüllt die Lizenzpflichten.
 - **Lizenz:** CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
 - **Quelle:** https://commons.wikimedia.org/wiki/File:Dampflok_Erlebniswelt06W.JPG
 - **Attribution:** „Kramer96, Dampflok Erlebniswelt, CC BY 3.0"
+
+## markus-renner.jpg
+- **Motiv:** Marcus Renner, Tourleitung (Porträt im Handout)
+- **Herkunft:** Privates Foto, kein Wikimedia Commons
+- **Rechtsgrundlage:** Einwilligung von Marcus Renner zur Veröffentlichung von Foto und Namensnennung auf der Ausfahrt-Website liegt vor (bestätigt 17.09.2026)
+- **Attribution:** keine erforderlich
