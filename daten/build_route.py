@@ -16,11 +16,15 @@ UA = {"User-Agent": "bmw6er-ausfahrt-roadbook/1.0 (privates Club-Handout)"}
 # Wegpunkte je Etappe, in Fahr-Reihenfolge. Nominatim-Suchstrings.
 ETAPPEN = {
     "1": [
+        # Seit 28.09.2026: Saaletal (St 2292) über Hausen/Aschach/Steinach statt
+        # B287 über Nüdlingen/Münnerstadt – Baustelle weg, Strecke ampelfrei
+        # und landschaftlich schöner (Testfahrt Marcus Renner).
         "Hotel Bayerischer Hof, Bad Kissingen",
         "Flugplatz, Bad Kissingen",
         "Untere Saline, Bad Kissingen",
-        "Nüdlingen",
-        "Meininger Straße, Münnerstadt",
+        "Aschach, Bad Bocklet",
+        "Steinach, Bad Bocklet",
+        "Unterebersbach",
         "Bad Neustadt an der Saale",
         "Heustreu",
         "Oberstreu",

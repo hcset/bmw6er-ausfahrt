@@ -1,5 +1,9 @@
 # Routenbeschreibung Ausfahrt BMW 6er Club am 03. Oktober 2026
 
+> Etappe 1 Positionen 7–14 geändert am 28.09.2026 nach Testfahrt von Marcus Renner:
+> Saaletal (St 2292) über Hausen/Aschach/Steinach statt B287 über Nüdlingen/Münnerstadt –
+> Baustelle weg, keine Ampeln, schönere Strecke.
+
 ## 1. Etappe Bad Kissingen nach Meiningen
 
 START Hotel Bayrischer Hof Bad Kissingen.
@@ -9,14 +13,14 @@ Rechts abbiegen in die Ludwigsstrasse.
 Nach der Ludwigsbrücke rechts abbiegen in die Bismarckstrasse Richtung Saline/Flugplatz.
 Geradeaus am Flugplatz vorbei.
 Rechts in die Klaushofstraße abbiegen und über die Nordbrücke fahren.
-Rechts in die Straße Untere Saline abbiegen.
-Immer geradeaus dem Nordring und dann Ostring folgen.
-An der großen Kreuzung an der Ampel links abbiegen in die B287 Münnerstädter Straße nach Nüdlingen.
-Immer geradeaus bis Nüdlingen und durch Nüdlingen durch.
-An der großen Kreuzung an der Ampel rechts abbiegen auf die B287 nach Münnerstadt.
-Nach dem Ortseingangsschild Münnerstadt B287 weiter folgen bis zur großen Kreuzung mit Ampel.
-Links abbiegen auf die B287 Meininger Straße Richtung Bad Neustadt.
-Bis Bad Neustadt immer geradeaus.
+Links in die Straße Untere Saline abbiegen Richtung Bad Neustadt a.d.S.
+Der Strecke weiter folgen durch Hausen, Kleinbrach und Großenbrach.
+An Aschach geradeaus vorbei fahren.
+Am Kreisel 2. Ausfahrt weiter nach Bad Neustadt.
+Immer geradeaus der Strecke folgen durch Hohn bis Steinach.
+In Steinach rechts abbiegen Richtung Bad Neustadt.
+Die Strecke weiter fahren durch Unterebersbach Richtung Bad Neustadt.
+An der Zufahrt zur St2445 links abbiegen Richtung Bad Neustadt.
 Am Kreisel in Bad Neustadt weiter geradeaus (zweite Ausfahrt).
 Durch Bad Neustadt fahren bis zur Kreuzung mit Ampel Abzweig rechts auf die B279 Richtung Mellrichstadt.
 Immer weiter geradeaus Richtung Mellrichstadt.

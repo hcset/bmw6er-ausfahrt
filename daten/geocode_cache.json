@@ -262,5 +262,23 @@
   "lat": 50.57102,
   "lon": 10.41641,
   "name": "Marienstraße, Schafhof, Meiningen"
+ },
+ "Aschach, Bad Bocklet": {
+  "q": "Aschach, Bad Bocklet",
+  "lat": 50.2565036,
+  "lon": 10.0611986,
+  "name": "Aschach, Bad Bocklet, Landkreis Bad Kissingen, Bayern, 97708, Deutschland"
+ },
+ "Steinach, Bad Bocklet": {
+  "q": "Steinach, Bad Bocklet",
+  "lat": 50.2851168,
+  "lon": 10.0990319,
+  "name": "Steinach, Bad Bocklet, Landkreis Bad Kissingen, Bayern, 97708, Deutschland"
+ },
+ "Unterebersbach": {
+  "q": "Unterebersbach",
+  "lat": 50.2964123,
+  "lon": 10.1291733,
+  "name": "Unterebersbach, Niederlauer, Bad Neustadt an der Saale (VGem), Landkreis Rhön-Grabfeld, Bayern, 97618, Deutschland"
  }
 }

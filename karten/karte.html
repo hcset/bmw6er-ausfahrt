@@ -47,9 +47,18 @@ const stopps = [
 
 const statisch = params.has('static');
 const map = L.map('map', { zoomSnap: 0.25, zoomControl: !statisch });
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const kacheln = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap-Mitwirkende'
 }).addTo(map);
+// Der Kachelserver drosselt groessere Bursts; fehlende Kacheln bis zu
+// dreimal nachladen, sonst bleiben im Screenshot graue Loecher stehen.
+kacheln.on('tileerror', function (e) {
+  const versuche = (e.tile._versuche || 0) + 1;
+  if (versuche > 3) return;
+  e.tile._versuche = versuche;
+  const url = e.tile.src.split('?')[0];
+  setTimeout(function () { e.tile.src = url + '?retry=' + versuche; }, 800 * versuche);
+});
 
 fetch('../daten/route.json')
   .then(r => r.json())
