@@ -1,7 +1,7 @@
 # HANDOFF – bmw6er-ausfahrt
 
-**Datum:** 2026-09-07, 16:21
-**Repo:** `/Users/ct/bmw6er-ausfahrt` (Branch `main`, HEAD `82377d4`)
+**Datum:** 2026-09-28, 10:20
+**Repo:** `/Users/ct/bmw6er-ausfahrt` (Branch `main`, HEAD `7c8908f`, Tag `v2.2.0`)
 **Stand:** läuft – live deployed, Orga-Punkte offen
 
 ---
@@ -54,6 +54,25 @@ Tourleitung). Live: https://hcset.github.io/bmw6er-ausfahrt/
   App-Variante als Zip in `~/Downloads/handoff-app-skill.zip`
 - alanbuildz.com-Guides inhaltlich geprüft, Prioritäten-PDF an User geliefert
 
+### Etappe 1 neu durchs Saaletal, v2.2.0 (Commit `7c8908f`, 28.09.2026)
+- Marcus ist die Alternative über Aschach abgefahren: Baustelle weg, keine
+  Ampeln, schönere Strecke. Roadbook-Positionen 7–14 ersetzt – links in die
+  Untere Saline, St 2292 durch Hausen/Kleinbrach/Großenbrach, an Aschach
+  vorbei, Kreisel, Hohn/Steinach/Unterebersbach, links auf die St 2445.
+  Entfällt: Nordring/Ostring und B287 über Nüdlingen/Münnerstadt
+- Unverändert: Positionen 1–6 und 15–40, Etappen 2+3, alle Zeiten und Stopps.
+  71,4 → 71,6 km; Gesamt bleibt 176 km, Heft bleibt bei 22 Seiten
+- Wegpunkte in `build_route.py` bewusst schlank (Aschach, Steinach,
+  Unterebersbach); mehr Zwischenpunkte erzeugen nur Dorfkern-Stiche.
+  Rebuild lief nur für Etappe 1 und wurde in route.json gemergt, damit
+  E2/E3-Kilometer stehen bleiben
+- `karte.html`: tileerror-Retry (3 Versuche) ergänzt – ohne den bleiben beim
+  Screenshot der Gesamtkarte graue Kachel-Löcher, der OSM-Kachelserver
+  drosselt den Burst. Höheres --virtual-time-budget hilft nicht
+- Nachgezogen: e1.jpg, gesamt.jpg, ausfahrt.gpx, beide PDFs, Pages live
+  verifiziert, NotebookLM (alte roadbook-a5.pdf + routenbeschreibung.md
+  gelöscht, neue hochgeladen, Änderungsnotiz angelegt), Obsidian-Hub
+
 ## 3. Repo-Map
 
 - `handout.html` – die eine Quelle: Web + Print-CSS (A5) + ?sw=1-Variante
@@ -99,6 +118,7 @@ Tourleitung). Live: https://hcset.github.io/bmw6er-ausfahrt/
 5. (Claude, optional angeboten) Mapillary-Fotos für knifflige Abzweige
    (kleine Berghaus-Einfahrt); PowerPoint fürs Briefing aus gleichem Inhalt
 6. (User) Druckerei/Ausdruck der finalen PDFs, wenn Punkte 1–4 eingepflegt
+   – Stand 28.09.2026 druckreif: neue Etappe 1 + vollständiger Datenschutz-Text drin
 
 ## 6. Bekannte Lücken / Blocker
 
