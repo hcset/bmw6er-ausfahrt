@@ -3,6 +3,12 @@
 > Etappe 1 Positionen 7–14 geändert am 28.09.2026 nach Testfahrt von Marcus Renner:
 > Saaletal (St 2292) über Hausen/Aschach/Steinach statt B287 über Nüdlingen/Münnerstadt –
 > Baustelle weg, keine Ampeln, schönere Strecke.
+>
+> Zweite Testfahrt am 29.09.2026 (Marcus und Elisa): Baustelle in Meiningen.
+> Etappe 1 – Kreisel vor Meiningen ist die dritte Ausfahrt, Kreisel Henneberger Straße
+> die erste Richtung Suhl, danach zwei neue Punkte über die Werrastraße (Sportstätten)
+> und rechts Richtung Fulda. Etappe 2 – Wegweiser nennen Kaltennordheim statt
+> Kaltensundheim, B284 nach Wüstensachsen ist Richtung Gersfeld ausgeschildert.
 
 ## 1. Etappe Bad Kissingen nach Meiningen
 
@@ -27,11 +33,13 @@ Immer weiter geradeaus Richtung Mellrichstadt.
 In Mellrichstadt rechts der Vorfahrtstraße folgen.
 Am Kreisel die zweite Ausfahrt Richtung Meiningen nehmen.
 Am Bahnhof vorbei.
-Am nächsten Kreisel die zweite Ausfahrt Richtung Meiningen nehmen.
+Am nächsten Kreisel die dritte Ausfahrt Richtung Meiningen nehmen.
 An der Kreuzung mit Ampel rechts abbiegen in die Meininger Landstraße Richtung Meiningen.
-Der Straße weiter folgen.
+Der Straße weiter folgen, über den Kreisverkehr hinaus.
 Vor Henneberg links abbiegen in die Henneberger Straße Richtung Meiningen.
-Am Kreisel die zweite Ausfahrt weiter auf die Henneberger Straße Richtung Meiningen.
+Am Kreisel die erste Ausfahrt Richtung Suhl nehmen.
+Am nächsten Kreisel die zweite Ausfahrt Richtung Sportstätten Meiningen nehmen (Werrastraße).
+An der Ampelkreuzung rechts abbiegen Richtung Fulda.
 Durch Meiningen fahren bis zur Querstrasse mit Ampel.
 Links in die Marienstraße abbiegen in Richtung Suhl, Eisenach.
 Am Meininger Theater vorbei.
@@ -47,7 +55,7 @@ Weiter geradeaus in die Adelheidstraße.
 Nach rechts abbiegen in die Rohrer Straße.
 Durch Eisenbahnunterführung geradeaus fahren weiter auf der Marienstraße.
 Wieder am Meininger Theater vorbei.
-Nach dem Theater an der Ampel dann nach links abbiegen in die Landsberger Straße.
+Nach dem Theater an der Ampel dann nach links abbiegen in die Landsberger Straße Richtung Fulda.
 Der Straße folgen bis zum Gasthof Brückenmühle.
 Parkplatz rechte Seite.
 Mittagessen.
@@ -56,16 +64,16 @@ Mittagessen.
 
 Rechts aus dem Parkplatz ausfahren auf Brückenmühle und Straße links folgen auf die Melkerser Hauptstraße.
 Straße folgen Richtung Herpf.
-In Herpf Richtung Kaltensundheim fahren.
+In Herpf Richtung Kaltennordheim fahren.
 Durch Stepfershausen fahren. Vorsicht Tempo 30 km/h!
-Durch Dörrensolz, danach Oberkatz, dann Aschenhausen weiter nach Kaltensundheim fahren.
+Durch Dörrensolz, danach Oberkatz weiter Richtung Kaltennordheim fahren.
 Die Hauptstraße B285 durch Kaltensundheim in Richtung Reichenhausen fahren.
 In Reichenhausen rechts abbiegen auf die Frankenheimer Straße Richtung Frankenheim.
 Durch Frankenheim fahren Richtung Birx.
 Die Seifertser Straße durch Birx fahren und aus Birx hinaus.
 An der Kreuzung rechts Richtung Seiferts auf die Birxstraße abbiegen.
 In Seiferts links abbiegen auf die B278 Richtung Wasserkuppe.
-Nach Wüstensachsen rechts abbiegen auf B284 Richtung Bischhofsheim.
+Nach Wüstensachsen rechts abbiegen auf B284 Richtung Gersfeld.
 Rechts abbiegen Richtung Wasserkuppe.
 Über die Wasserkuppe fahren.
 Am Kreisel geradeaus Richtung Abtsroda weiterfahren.

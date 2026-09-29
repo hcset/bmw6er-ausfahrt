@@ -1,7 +1,7 @@
 # HANDOFF – bmw6er-ausfahrt
 
-**Datum:** 2026-09-28, 10:20
-**Repo:** `/Users/ct/bmw6er-ausfahrt` (Branch `main`, HEAD `7c8908f`, Tag `v2.2.0`)
+**Datum:** 2026-09-29, 09:10
+**Repo:** `/Users/ct/bmw6er-ausfahrt` (Branch `main`, HEAD `9922355`, Tag `v2.3.0`)
 **Stand:** läuft – live deployed, Orga-Punkte offen
 
 ---
@@ -53,6 +53,25 @@ Tourleitung). Live: https://hcset.github.io/bmw6er-ausfahrt/
 - Skill `/handoff` global installiert (`~/.claude/skills/handoff/`), plus
   App-Variante als Zip in `~/Downloads/handoff-app-skill.zip`
 - alanbuildz.com-Guides inhaltlich geprüft, Prioritäten-PDF an User geliefert
+
+### Baustelle Meiningen + Etappe-2-Wegweiser, v2.3.0 (Commit `9922355`, 29.09.2026)
+- Zweite Testfahrt von Marcus und Elisa: Baustelle in Meiningen
+- Etappe 1: Kreisel vor Meiningen ist die dritte Ausfahrt (war zweite),
+  Punkt 23 „über den Kreisverkehr hinaus", Kreisel Henneberger Straße ist
+  die erste Ausfahrt Richtung Suhl. Zwei neue Punkte 26/27 umfahren die
+  Baustelle (Kreisel zweite Ausfahrt Richtung Sportstätten Meiningen /
+  Werrastraße, dann Ampelkreuzung rechts Richtung Fulda). Alte Punkte 26–40
+  rutschen auf 28–42, Zwischenziel-Index im Distanz-Script von 31 auf 33,
+  Landsberger Straße bekommt „Richtung Fulda"
+- Etappe 2: Kaltennordheim statt Kaltensundheim (Punkte 3+5), Aschenhausen
+  aus Punkt 5 gestrichen, B284 nach Wüstensachsen Richtung Gersfeld statt
+  Bischofsheim, Wasserkuppen-Baustellenhinweis nennt den Wiedereinstieg
+  (Punkt 19). Punkt 6 bleibt bewusst „durch Kaltensundheim" – die Wegweiser
+  nennen den größeren Ort, gefahren wird weiter durch Kaltensundheim
+- Route/Karte/GPX bewusst NICHT angefasst: ein erzwungener Wegpunkt
+  Werrastraße ändert die gemessene Distanz um unter 10 m. Nur die PDFs neu
+- Heft weiterhin 22 Seiten, Etappe 1 jetzt 42 statt 40 Positionen
+- `.serena/` und `daten/__pycache__/` in .gitignore aufgenommen
 
 ### Etappe 1 neu durchs Saaletal, v2.2.0 (Commit `7c8908f`, 28.09.2026)
 - Marcus ist die Alternative über Aschach abgefahren: Baustelle weg, keine
