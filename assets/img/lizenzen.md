@@ -79,3 +79,15 @@ des Handouts (Autor + Lizenz + Link pro Bild) erfüllt die Lizenzpflichten.
 - **Herkunft:** Privates Foto, kein Wikimedia Commons
 - **Rechtsgrundlage:** Einwilligung von Marcus Renner zur Veröffentlichung von Foto und Namensnennung auf der Ausfahrt-Website liegt vor (bestätigt 17.09.2026)
 - **Attribution:** keine erforderlich
+
+## qr-roadbook.svg / qr-roadbook.png
+- **Motiv:** QR-Code auf die Projektseite hcset.github.io/bmw6er-ausfahrt
+- **Herkunft:** selbst erzeugt, kein fremdes Werk
+- **Lizenz:** keine Lizenzpflicht (QR-Code-Spezifikation ist lizenzfrei nutzbar)
+- **Attribution:** keine erforderlich
+
+## Hinweis zu meiningen.jpg
+Die Datei liegt im Repo und wird mit ausgeliefert, ist aber aktuell in keiner Seite
+eingebunden. Die Attributionszeile in Heft und Startseite nennt sie weiterhin — das ist
+korrekt, solange die Datei öffentlich abrufbar ist. Wird sie entfernt, muss auch die
+Nennung von Andreas Praefcke aus `handout.html` und `index.html` raus.

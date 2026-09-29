@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roadbook – BMW 6er Club Ausfahrt 03.10.2026</title>
 <meta name="description" content="Roadbook der BMW 6er Club Ausfahrt am 03.10.2026: Bad Kissingen – Meiningen – Rhön – Bad Kissingen, 3 Etappen, ca. 176 km.">
-<meta name="version" content="2.3.0">
+<meta name="version" content="2.3.1">
 <meta name="version-date" content="2026-09-29">
 <style>
 @font-face { font-family: "DINish"; src: url("assets/fonts/DINish-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -345,6 +345,10 @@ ol.quiz li::before {
 @media print {
   body { background: #fff; font-size: 9.4pt; line-height: 1.42; }
   nav.leiste, .web-karte-link, #version-badge, .nur-web { display: none !important; }
+  /* Rechtsblock enger setzen: Impressum + ausfuehrlicher Datenschutz sollen
+     auf die Rueckseite passen, ohne dass Text gekuerzt wird. */
+  .lizenzen { margin-top: 20px; font-size: 0.62rem; line-height: 1.35; }
+  .lizenzen p { margin-bottom: 3px; }
   .bogen {
     max-width: none; margin: 0; padding: 0;
     box-shadow: none;
@@ -823,7 +827,8 @@ finish review, the verdict, DESIGN.md, and every shipping raster carrying its pr
     <p><strong>Karten:</strong> © OpenStreetMap-Mitwirkende (openstreetmap.org/copyright), Routing: OSRM.</p>
     <p id="foto-lizenzen"><strong>Fotos</strong> (Wikimedia Commons): Ermell, „BMW 635 CSi (E24)", CC BY-SA 4.0 · Urmelbeauftragter, „03 1010 Meiningen", CC BY-SA 3.0 · Tilman2007, „Wasserkuppe, Radom, bei Sonnenuntergang", CC BY-SA 4.0 · Andreas Praefcke, „Meiningen Bernhardstraße Theater", CC BY 3.0 · Holger Uwe Schmitt, „Der Regentenbau in Bad Kissingen", CC BY-SA 4.0 · Ursula Jaeger, „Landschaft im NSG Lange Rhön", CC BY-SA 4.0 · Kramer96, „Dampflok Erlebniswelt", CC BY 3.0. Wappen Bad Kissingen und Meiningen: gemeinfrei. Lizenztexte: creativecommons.org/licenses.</p>
     <p>Roadbook erstellt im September 2026. Alle Zeitangaben sind Planwerte ohne Gewähr; Ampeln, Baustellen und Bratwurstpausen behalten das letzte Wort.</p>
-    <p id="datenschutz"><strong>Datenschutz:</strong> Diese Webseite wird als statische HTML-Seite betrieben und bei GitHub Pages gehostet (GitHub, Inc., USA). Beim Aufruf wird Ihre IP-Adresse technisch bedingt an GitHub übertragen und dort in Server-Logs verarbeitet (<a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" rel="noopener">Datenschutzerklärung von GitHub</a>). Es werden keine Cookies gesetzt, kein Tracking eingesetzt und keine Analyse-Tools verwendet. <strong>Schriftarten</strong> sind lokal eingebunden – keine Verbindung zu Google Fonts oder anderen externen Schriftdiensten. <strong>Karten</strong> im Heft sind statische Bilder; der Standort- bzw. Karten-Link führt zu OpenStreetMap – eine Datenübertragung erfolgt erst nach aktivem Klick. <strong>Kontakt per E-Mail:</strong> Ihre Angaben werden nur zur Bearbeitung Ihrer Anfrage gespeichert, keine Weitergabe an Dritte. <strong>Bilder</strong> stammen von Wikimedia Commons unter den oben genannten CC-Lizenzen und werden lokal ausgeliefert.</p>
+    <p id="impressum"><strong>Impressum / Verantwortlich für diese Seite:</strong> Carsten Tesch · E-Mail: <a href="mailto:hcset67@gmail.com">hcset67@gmail.com</a>. Private, nicht-kommerzielle Seite zur Ausfahrt des BMW 6er Clubs am 03.10.2026.</p>
+    <p id="datenschutz"><strong>Datenschutz:</strong> Diese Webseite wird als statische HTML-Seite betrieben und bei GitHub Pages gehostet (GitHub, Inc., USA). Beim Aufruf wird Ihre IP-Adresse technisch bedingt an GitHub übertragen und dort in Server-Logs verarbeitet (<a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" rel="noopener">Datenschutzerklärung von GitHub</a>). Es werden keine Cookies gesetzt, kein Tracking eingesetzt und keine Analyse-Tools verwendet. <strong>Schriftarten</strong> sind lokal eingebunden – keine Verbindung zu Google Fonts oder anderen externen Schriftdiensten. <strong>Karten</strong> im Heft sind statische Bilder. Die interaktive Streckenkarte öffnet sich erst nach aktivem Klick; dabei werden Kartenkacheln vom Server der OpenStreetMap Foundation (tile.openstreetmap.org) geladen und Ihre IP-Adresse dorthin übertragen (<a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener">Datenschutzhinweise der OSMF</a>). Die Kartenbibliothek (Leaflet) wird lokal ausgeliefert, ohne Verbindung zu Drittservern. <strong>Kontakt per E-Mail:</strong> Ihre Angaben werden nur zur Bearbeitung Ihrer Anfrage gespeichert, keine Weitergabe an Dritte. <strong>Bilder</strong> stammen von Wikimedia Commons unter den oben genannten CC-Lizenzen und werden lokal ausgeliefert.</p>
     <p><strong>Entwicklung:</strong> Marcus Renner und Carsten Tesch. © 2026 – alle Rechte vorbehalten.</p>
   </div>
 </footer>
