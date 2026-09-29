@@ -1,7 +1,8 @@
 # HANDOFF – bmw6er-ausfahrt
 
-**Datum:** 2026-09-29, 09:10
-**Repo:** `/Users/ct/bmw6er-ausfahrt` (Branch `main`, HEAD `9922355`, Tag `v2.3.0`)
+**Datum:** 2026-09-29, 10:05
+**Repo:** `/Users/ct/bmw6er-ausfahrt` (Branch `main`, HEAD `712c558`, Tag `v2.3.1`)
+**Stand:** DRUCKREIF – Inhalt eingefroren, wartet nur noch auf die Baustellen-Lage am 02.10.
 **Stand:** läuft – live deployed, Orga-Punkte offen
 
 ---
@@ -53,6 +54,20 @@ Tourleitung). Live: https://hcset.github.io/bmw6er-ausfahrt/
 - Skill `/handoff` global installiert (`~/.claude/skills/handoff/`), plus
   App-Variante als Zip in `~/Downloads/handoff-app-skill.zip`
 - alanbuildz.com-Guides inhaltlich geprüft, Prioritäten-PDF an User geliefert
+
+### Abmahn-Check + Rechtsteil im Heft, v2.3.1 (Commit `712c558`, 29.09.2026)
+- 18-Punkte-Selbstcheck vor dem Druck: bestanden. Einziger Befund war, dass
+  der Datenschutz-Text in `handout.html` knapper war als der in `index.html`,
+  obwohl beide auf `karten/karte.html` verlinken
+- Heft trägt jetzt den Wortlaut der Startseite wörtlich (OSMF-Kachelserver
+  namentlich, IP-Übertragung, Leaflet lokal) plus das Impressum, das vorher
+  nur die Startseite hatte. Vorlage wird im Fix-Script direkt aus
+  `index.html` gelesen – die beiden Texte dürfen nicht wieder auseinanderlaufen
+- Der Rechtsblock ist im Druck enger gesetzt (`@media print`, `.lizenzen`
+  auf 0.62rem/1.35), sonst rutscht die Rückseite auf Seite 23. Heft bleibt
+  bei 22 Seiten, gekürzt wurde nichts
+- `assets/img/lizenzen.md`: QR-Code dokumentiert, Hinweis dass
+  `meiningen.jpg` ausgeliefert, aber nirgends eingebunden wird
 
 ### Baustelle Meiningen + Etappe-2-Wegweiser, v2.3.0 (Commit `9922355`, 29.09.2026)
 - Zweite Testfahrt von Marcus und Elisa: Baustelle in Meiningen
